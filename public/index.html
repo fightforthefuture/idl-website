@@ -5,19 +5,30 @@
 <title>Internet Defense League</title>
 <link href="/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="http://sopastrike.com/strike/jquery.placeholder.js"></script>
 
-<!--[if lt IE 9]>
-	<script src="/html5.js"></script>
-	<link rel="stylesheet" type="text/css" href="/ie.css">
-<![endif]-->
 		
 		
 <script>
-$(document).ready(function() {
-	$('input[placeholder],textarea[placeholder]').placeholder();
-});
-</script>
+     $(document).ready(function() {
+       $(".default-text").focus(function(){
+         if ($(this).val() == $(this)[0].title){
+           $(this).removeClass("default-text-active");
+           $(this).val("");
+         }
+       });
+
+       $(".default-text").blur(function(){
+         if ($(this).val() == ""){
+           $(this).addClass("default-text-active");
+           $(this).val($(this)[0].title);
+         }
+       });
+
+       $(".default-text").blur();
+       
+     });
+   </script>
+
 </head>
 <body>
 	
@@ -35,9 +46,9 @@ $(document).ready(function() {
 	
 		<form name="signup" action="https://donate.fightforthefuture.org/page/signup/internet-defense-league" method="post" id="signup">		<div class="wrap">
 			<p class="description">Will you sign up to defend the internet? We'll let you know when the code for your site is ready, and we'll only contact you if there's a grave threat or unmissable opportunity. You can unsubscribe at any time.</p>
-			<input  id="custom-331" name="custom-331" placeholder="Website" title="Website" />
-			<input id="email" name="email" placeholder="Email" title="Email" />
-			<input id="custom-332" name="custom-332" placeholder="Monthly Uniques (Opt.)" title="Monthly Uniques (Opt.)" />
+			<input  id="custom-331" name="custom-331" placeholder="Website" title="Website" class="default-text"/>
+			<input id="email" name="email" placeholder="Email" title="Email" class="default-text"/>
+			<input id="custom-332" name="custom-332" placeholder="Monthly Uniques (Opt.)" title="Monthly Uniques (Opt.)" class="default-text"/>
 			<button>Join The Network</button>
 		</div>
 	</form>
