@@ -1,0 +1,43 @@
+* {margin: 0; padding: 0;}
+
+body {
+	font-family: monospace;
+	font-size: 13px;
+	line-height: 1.5;
+	color: #fff;
+	background: #000;
+}
+
+a {color: red;}
+
+p, li {font-family: 'helvetica neue', helvetica, arial, sans-serif;}
+
+.wrap {
+	margin: 0 auto;
+	width: 960px;
+}
+
+.masthead {
+	height: 140px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.masthead h1 {font-size: 58px; font-weight: bold;}
+.masthead p.description {font-size: 25px; font-family: monospace;}
+
+.secondary {padding-bottom: 20px; font-size: 15px;}
+.secondary h2 {font-size: 26px;border-bottom: 1px dashed #fff; margin-bottom: 10px;}
+
+form {padding: 20px; background: red; text-align: center; margin-bottom: 20px;}
+form p {margin-bottom: 20px; text-align: left; font-size: 15px;}
+form input {width: 180px; height: 30px; text-align: center; font-weight: bold; font-size: 14px;}
+button {width: 200px; height: 35px;}
+
+.each {width: 420px; float: left; margin-right: 20px; margin-bottom: 20px; padding: 20px;}
+.each h3, .last h3 {font-size: 20px; margin-bottom: 10px; border-bottom: 1px dashed #fff;}
+.each p, .each li {margin-bottom: 10px;}
+.last {clear: both;}
+
+.footerinforight {clear: both; margin-top: 200px;}
