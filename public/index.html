@@ -4,7 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Internet Defense League</title>
 <link href="/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+window.startTime = (new Date()).getTime();
+</script>
+
 <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script src="http://a.fightforthefuture.org/samples/actionkit.js"></script>
+
+<script type="text/javascript">actionkit.forms.initPage()</script>
+
 
 		
 		
@@ -47,14 +55,19 @@
 		</div><!-- close .secondary -->
 	</div>
 	
-		<form name="signup" action="https://donate.fightforthefuture.org/page/signup/internet-defense-league" method="post" id="signup">		<div class="wrap">
-			<p class="description">Will you sign up to defend the internet? We'll let you know when the code for your site is ready, and we'll only contact you if there's a grave threat or unmissable opportunity. You can unsubscribe at any time.</p>
-			<input  id="custom-331" name="custom-331" placeholder="Website" title="Website" class="default-text"/>
-			<input id="email" name="email" placeholder="Email" title="Email" class="default-text"/>
-			<input id="custom-332" name="custom-332" placeholder="Monthly Uniques (Opt.)" title="Monthly Uniques (Opt.)" class="default-text"/>
-			<button>Join The Network</button>
-		</div>
-	</form>
+<form class="action_form" name="act" method="POST" action="http://a.fightforthefuture.org/act/" accept-charset="utf-8">
+<div class="wrap">
+	<p class="description">Will you sign up to defend the internet? We'll let you know when the code for your site is ready, and we'll only contact you if there's a grave threat or unmissable opportunity. You can unsubscribe at any time.</p>
+	<input  id="website" name="user_website" placeholder="Website" title="Website" class="default-text"/>
+	<input id="email" name="email" placeholder="Email" title="Email" class="default-text"/>
+	<input id="monthly_uniques" name="user_monthly_uniques" placeholder="Monthly Uniques (Opt.)" title="Monthly Uniques (Opt.)" class="default-text"/>
+	<input type="hidden" name="page" value="interent-defense-league">
+
+	<input type="hidden" name="lists" value="1" />
+	
+	<button>Join The Network</button>
+</div>
+</form>
 		
 	<div class="wrap">
 		<div class="each">
@@ -105,6 +118,13 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+</script>
+
+<script src="/js/idl.js"></script>
+
+<script>
+
+displayAmericanCensorshipModal();
 </script>
 </body>
 </html>
