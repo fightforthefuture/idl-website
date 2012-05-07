@@ -163,7 +163,7 @@ input, .primary-actions textarea, .step .middle textarea, .step .middle input {
 input checkbox { width: auto; }
 form select.twitter-reps { width: 100%; }
 
-button#gotime {
+button#gotime, a.donate_gotime{
 	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
 	box-shadow:inset 0px 1px 0px 0px #caefab;
@@ -189,19 +189,21 @@ button#gotime {
 	font-family: 'BebasNeueRegular';
 	letter-spacing: .05em;
 }
-form button#gotime:hover {
+form button#gotime:hover, a.donate_gotime:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
 	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
 	background-color:#5cb811;
 }
 
-button#gotime:active {
+button#gotime:active, a.donate_gotime:active {
 	position:relative;
 	top:1px;
 }
 
-button#gotime span {margin-top: 2px;}
+a.donate_gotime {display: block; margin: 0 auto; margin-top: 20px; padding: 14px 0px; font-size: 30px;}
+
+a.donate_gotime span, button#gotime span {margin-top: 2px;}
 
          .letter {
            width: 100%;

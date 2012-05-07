@@ -14,7 +14,38 @@
 </head>
 
 <body>
- 
+ 	<div id="fb-root"></div>
+	      <script>
+	        window.fbAsyncInit = function() {
+	          FB.init({
+	            appId      : '272937519465570',
+	            status     : true, 
+	            cookie     : true,
+	            xfbml      : true,
+	            oauth      : true,
+	          });
+
+	        FB.Event.subscribe('auth.login',
+	            function(response) {
+
+
+	                FB.api('/me', function(response) {
+	                //alert('Your name is ' + response.name);
+	                $("#id_name").val(response.name);
+	                $("#id_email").val(response.email);
+	                $("#fb").val(response.username);
+	                });                   
+	            }); 
+
+	       }; 
+	        (function(d){
+	           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+	           js = d.createElement('script'); js.id = id; js.async = true;
+	           js.src = "//connect.facebook.net/en_US/all.js";
+	           d.getElementsByTagName('head')[0].appendChild(js);
+	         }(document));
+	      </script>
+	
   <div id="wrapper">
     <div id="container">
       <div class="wrap" id="intro"></div>
@@ -112,10 +143,16 @@
       </div>
 
       <div class="step teal">
-        <div class="center-text">
+        <div class="center-text" style=" padding-bottom: 30px;">
           <h2 style="margin-top: 60px;">Support the network. Become a member.</h2>
 
-          <p class="step-text">Our organization and network helped to defeat SOPA/PIPA (by making the innovative tools that powered the largest online protest in history).&nbsp; The Internet Defense League continues this work. But it depends on its&nbsp; members' donations for its tiny staff to keep working behind the scenes.&nbsp; Your donation makes us stronger AND and helps us fight to win. <button id="gotime" style="margin: 20px auto;"><span><a href="http://a.fightforthefuture.org/donate/donate" style="text-decoration: none;">DONATE</a></span></button></p>
+          <p class="step-text">Our organization and network helped to defeat SOPA/PIPA (by making the innovative tools that powered the largest online protest in history).&nbsp; The Internet Defense League continues this work. But it depends on its&nbsp; members' donations for its tiny staff to keep working behind the scenes.&nbsp; Your donation makes us stronger AND and helps us fight to win.
+	
+	<a href="http://a.fightforthefuture.org/donate/donate" class="donate_gotime"><span>DONATE</span></a>
+	
+	</p>
+
+
         </div>
       </div>
 
