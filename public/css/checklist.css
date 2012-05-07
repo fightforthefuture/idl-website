@@ -123,8 +123,8 @@ p.overview {
 .call-to-action h1 { color: #fff; font-size: 18pt; font-weight: normal; padding-bottom: 0px; margin-bottom: 9px; margin-top: 20px; font-family: 'Montserrat', sans-serif; }
 
 .call-to-action p { font-size: 12pt; line-height: 14pt; color: #fff; display: block; margin-top: 0px; padding-top: 0px;  }
-.call-to-action li { font-size: 8.5pt; line-height: 14pt; font-weight: normal; font-family: 'Montserrat', sans-serif;  margin-bottom: 10px; list-style-image: url(../images/arrow.png); }
-.call-to-action ul { margin-left: 20px;}
+.works li { font-size: 8.5pt; line-height: 14pt; font-weight: normal; font-family: 'Montserrat', sans-serif;  margin-bottom: 10px; list-style-image: url(../images/arrow.png); }
+ul.works  { margin-left: 20px;}
 
 .column { width: 295px; float: left; margin-left: 10px; margin-right: 10px; margin-top: 60px;text-align: left; margin-bottom: 20px; }
 
@@ -303,16 +303,21 @@ div.social a.facebook {background: url('/images/chubby_facebook.png'); width: 15
 
 .footer-nav {
   clear: both;
-  margin-right: 20px;
   font-family: 'BebasNeueRegular';
   letter-spacing: .1em;
   font-size: 13pt;
   font-weight: normal;
+  margin-left: 0px;
+  padding-left:0;
+margin-top: 10px;
 }
 
 .footer-nav a {text-decoration: none;}
 
-.footer-nav img { margin-right: 10px; }
 
 
 .activez {color: #3E3A3D;}
+
+a.dev {clear: both; width: 100%; display: block; height: 30px; }
+.footer-nav img {float: left; margin-right: 10px; }
+.footer-nav span {float: left;}
