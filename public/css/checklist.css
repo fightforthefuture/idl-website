@@ -38,7 +38,7 @@ html, body {
    margin: 0px auto 0px auto;
    background: #000 url(../images/IDL.teal.png) no-repeat;
    -moz-box-shadow: 0 0 10px 5px #292527;
--webkit-box-shadow: 0 0 10px 5px #292527;
+   -webkit-box-shadow: 0 0 10px 5px #292527;
 }
 .wrap {width: 950px; margin: 0 auto; }
 #container {
@@ -309,3 +309,6 @@ div.social a.facebook {background: url('/images/chubby_facebook.png'); width: 15
 .footer-nav a {text-decoration: none;}
 
 .footer-nav img { margin-right: 10px; }
+
+
+.activez {color: #3E3A3D;}
