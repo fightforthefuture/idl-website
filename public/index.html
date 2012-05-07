@@ -13,41 +13,37 @@
 	<script src="http://a.fightforthefuture.org/samples/actionkit.js"></script>
 
 	<script type="text/javascript">actionkit.forms.initPage()</script>
+	
+	
+	<meta property="og:title" content="Want to help defend the internet from attacks like CISPA? Join me in the
+	Internet Defense League! If we act together, we can save the net." />
+		  <meta property="og:description" content="The Internet Defense League is a group of sites simultaneously sound the
+			alarm when powerful interests try to restrict or censor the internet.
+			Think the SOPA blackout, but larger and even more unstoppable. We have
+			big plans that you can be a part of. Register you site now!" />
+		  <meta property="og:image" content="http://internetdefenseleage.org/images/fb-share.png" />
+		  <meta property="og:url" content="http://internetdefenseleage.org" />
+		  <meta property="og:type" content="article" />
 </head>
 
 <body>
- 	<div id="fb-root"></div>
-	      <script>
-	        window.fbAsyncInit = function() {
-	          FB.init({
-	            appId      : '272937519465570',
-	            status     : true, 
-	            cookie     : true,
-	            xfbml      : true,
-	            oauth      : true,
-	          });
-
-	        FB.Event.subscribe('auth.login',
-	            function(response) {
-
-
-	                FB.api('/me', function(response) {
-	                //alert('Your name is ' + response.name);
-	                $("#id_name").val(response.name);
-	                $("#id_email").val(response.email);
-	                $("#fb").val(response.username);
-	                });                   
-	            }); 
-
-	       }; 
-	        (function(d){
-	           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-	           js = d.createElement('script'); js.id = id; js.async = true;
-	           js.src = "//connect.facebook.net/en_US/all.js";
-	           d.getElementsByTagName('head')[0].appendChild(js);
-	         }(document));
-	      </script>
-	
+	<div class="socialize" style="position: absolute; height: 350px; margin-left: 10px; margin-top: 10px;">
+	<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+			<div id="shareitup" style="overflow: visible">
+				<div class="fb-like" data-href="http://internetdefenseleague.org" data-send="true" data-layout="box_count" data-width="150" data-show-faces="true"></div>
+				<br />				<br />				<br />	
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://internetdefenseleague.org" data-text="If we act together, we can save the net from attacks like #CISPA. Join me in the #InternetDefenseLeague!">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+ </div>
   <div id="wrapper">
     <div id="container">
       <div class="wrap" id="intro"></div>
@@ -190,7 +186,7 @@
 	            </div>
 
 	            <div>
-	              <img src="/images/twitter.png" style="margin-top: 6px;"> TWITTER
+	              <a href="https://twitter.com/Defense_League"><img src="/images/twitter.png" style="margin-top: 6px;"> TWITTER</a>
 	            </div>
 	          </div>
 	        </div>
@@ -221,6 +217,5 @@
 		});		
 
 	</script>
-	<!-- Shh, just testing -->
 </body>
 </html>
