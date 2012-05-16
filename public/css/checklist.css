@@ -271,6 +271,11 @@ div.social a.facebook {background: url('/images/chubby_facebook.png'); width: 15
 	background:-moz-linear-gradient( center top, #a8450a 5%, #d6580b 100% );
 }
 
+.blue {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1B3549), color-stop(1, #142A39) );
+  background:-moz-linear-gradient( center top, #1B3549 5%, #142A39 100% );
+}
+
 .green {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4f5a0d), color-stop(1, #617013) );
 	background:-moz-linear-gradient( center top, #4f5a0d 5%, #617013 100% );
