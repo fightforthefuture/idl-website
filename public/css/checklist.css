@@ -262,7 +262,7 @@ div.social a.facebook {background: url('/images/chubby_facebook.png'); width: 15
 #tag{
 width: 67px;
 height: 228px;
-position:absolute;
+position:fixed;
 left: 0px;
 z-index: 500;
 margin-top: 200px;
