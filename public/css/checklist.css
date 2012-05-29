@@ -36,7 +36,7 @@ html, body {
 /*   height: 25.1in;*/
    width: 1000px;
    margin: 0px auto 0px auto;
-   background: #000 url(../images/IDL.teal.png) no-repeat;
+   background: #000 url(../images/IDL.blue.png) no-repeat;
    -moz-box-shadow: 0 0 10px 5px #292527;
    -webkit-box-shadow: 0 0 10px 5px #292527;
 }
@@ -69,7 +69,7 @@ html, body {
    background-color: transparent;
 }
 
-h1 { font-size: 28pt; font-weight: normal; line-height: 28px; margin: 50px 0px 14px 50px; font-family: 'BevanRegular', sans-serif; color: #fff; font-weight: normal; text-align: center; text-shadow: 4px 4px 8px #083b43; }
+h1 { font-size: 28pt; font-weight: normal; line-height: 28px; margin: 50px 0px 14px 50px; font-family: 'BevanRegular', sans-serif; color: #fff; font-weight: normal; text-align: center; text-shadow: 1px 3px 5px #2D4A6E; }
 h2 { font-size: 32px; font-weight: normal; margin-top: 20px; font-family: 'Montserrat', sans-serif; }
 h3 { font-size: 19pt; font-weight: normal; margin: 0px 0px 12px 0px;  font-family: 'Montserrat', sans-serif;  color: #fff;}
 
@@ -98,7 +98,7 @@ p { font-size: 14pt; font-weight: normal; line-height: 22pt; }
    background-color: transparent;
 }
 
-#leadin a {color: #c4e94e;}
+#leadin a {color: #FEE834;}
 
 p.leadin {
    color: #cccccc;
@@ -156,7 +156,7 @@ input, .primary-actions textarea, .step .middle textarea, .step .middle input {
    border: 1px solid #afafaf;
    padding: 5px;
    text-align: left;
-   border: 2px solid #73adb4;
+   border: 2px solid #5478A3;
 }
 
 
@@ -265,6 +265,14 @@ div.social a.facebook {background: url('/images/chubby_facebook.png'); width: 15
 .step-icon { float: right; width: 450px; height: 320px; text-align: center; vertical-align: middle; }
 .step-text { font-family: 'Montserrat', sans-serif; font-size: 12pt; height: 323px; line-height: 18pt; margin-top: 12px; }
 .step-container { margin-left: 85px; width: 430px; height: 323px; float: left;  }
+
+ul.partlogos { position: relative; top: 29px; width: 100%; margin-left: 115px;}
+ul.partlogos li { display: inline; float: left; width: auto; height: auto; margin-right: 35px; }
+
+.peach {
+	background: url('/images/city.png')  center bottom no-repeat, -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #B77622), color-stop(1, #F6A335) );
+	background:url('/images/city.png') center bottom no-repeat, -moz-linear-gradient( center top, #B77622 5%, #F6A335 100% );
+}
 
 .orange {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a8450a), color-stop(1, #d6580b) );
