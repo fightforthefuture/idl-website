@@ -279,8 +279,12 @@ background: url('/images/fftf_tag.png');
 .step-text { font-family: 'Montserrat', sans-serif; font-size: 12pt; height: 323px; line-height: 18pt; margin-top: 12px; }
 .step-container { margin-left: 85px; width: 430px; height: 323px; float: left;  }
 
-ul.partlogos { position: relative; top: 29px; width: 960px; margin-left: 15px; margin-top: -10px; text-align: center;}
-ul.partlogos li { display: inline; width: auto; height: auto; margin-right: 35px; margin-bottom: 30px;}
+ul.partlogos { display: block; width: 960px; margin-left: auto; margin-right: auto; margin-top: 10px; text-align: center;}
+ul.partlogos li { display: inline; width: auto; height: auto; margin-left: 10px; margin-right: 30px; margin-bottom: 30px; margin-top: 20px;}
+
+.logolinks {
+margin-bottom: 15px;
+}
 
 .peach {
 	height: 400px;
