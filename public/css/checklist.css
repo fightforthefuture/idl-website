@@ -34,9 +34,10 @@ html, body {
 #wrapper {
    color: #fff;
 /*   height: 25.1in;*/
+height: 2300px;
    width: 1000px;
    margin: 0px auto 0px auto;
-   background: #000 url(../images/IDL.blue.png) no-repeat;
+   /*background: #000 url(../images/badges/IDL.blue.jpg) no-repeat;*/
    -moz-box-shadow: 0 0 10px 5px #292527;
    -webkit-box-shadow: 0 0 10px 5px #292527;
 }
@@ -68,6 +69,8 @@ html, body {
    height: 447px;
    background-color: transparent;
 }
+
+
 
 h1 { font-size: 28pt; font-weight: normal; line-height: 28px; margin: 50px 0px 14px 50px; font-family: 'BevanRegular', sans-serif; color: #fff; font-weight: normal; text-align: center; text-shadow: 1px 3px 5px #2D4A6E; }
 h2 { font-size: 32px; font-weight: normal; margin-top: 20px; font-family: 'Montserrat', sans-serif; }
@@ -352,3 +355,90 @@ margin-top: 10px;
 a.dev {clear: both; width: 100%; display: block; height: 30px; }
 .footer-nav img {float: left; margin-right: 10px; }
 .footer-nav span {float: left;}
+
+/* @group badges page CSS */
+
+#badges_intro {
+   padding: 0px 0px 10px 40px;
+/*   background: #000 url(../images/header.2.png) no-repeat 0px 0px;*/
+   height: 1400px;
+   background-color: transparent;
+}
+
+.blue_pod{
+	margin-left: 85px;
+	margin-bottom: 45px;
+	font-family: 'Montserrat', sans-serif; 
+	text-align: center;
+	padding: 20px;
+	float: left;
+	width: 331px;
+	height: 476px;
+	-moz-border-radius: 10px; /* from vector shape */
+	-webkit-border-radius: 10px; /* from vector shape */
+	border-radius: 10px; /* from vector shape */
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box; /* prevents bg color from leaking outside the border */
+	background-color: #3d5b85; /* layer fill content */
+	-moz-box-shadow:
+		0 1px 1px #88acda /* drop shadow */,
+		inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+	-webkit-box-shadow:
+		0 1px 1px #88acda /* drop shadow */,
+		inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+	box-shadow:
+		0 1px 1px #88acda /* drop shadow */,
+		inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+	
+}
+
+.caption{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-style: italic;
+	color: #fff; /* text color */
+	text-shadow: 0 2px 2px #465471; /* drop shadow */
+}
+
+#note_txt{
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-style: italic;
+color: #000; /* text color */
+text-shadow: 0 1px 1px #fff; /* drop shadow */
+font-size:12pt;
+	
+}
+
+#note_txt a{
+	color: black;
+	text-decoration: underline;
+}
+
+.code{
+	float: left; 
+	display: block;
+	margin: 10px 10px 10px 20px;
+	font-family: "Courier New", Courier, monospace;
+	color: #000;
+	font-size: 12pt;
+	font-weight: regular;
+	background: 0;
+	background: #fff;
+	border: 1px solid #afafaf;
+	padding: 5px;
+	text-align: left;
+	border: 2px solid #5478A3;
+	width: 284px;
+	height: 143px;
+	
+}
+
+#note{
+	background: url('../images/badges/note.png') no-repeat;
+	width: 621px;
+	height: 62px;
+	margin-left: 190px;
+	margin-bottom: 25px;
+}
+
+/* @end */
