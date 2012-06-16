@@ -14,9 +14,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
-	<script src="http://a.fightforthefuture.org/samples/actionkit.js"></script>
 
-	<script type="text/javascript">actionkit.forms.initPage()</script>
 	
 	
 	<meta property="og:title" content="Want to help defend the internet from censorship and broken legislation? Join me in the Internet Defense League! If we act together, we can save the net." />
@@ -58,25 +56,34 @@
         <p style="font-family: 'Montserrat', sans-serif; padding-bottom: 10px; padding-top: 20px; font-size: 12pt; line-height: 17pt; color: #fff; margin-left: 335px;">The <a href="http://sopastrike.com">Internet Blackout</a> was just the beginning. Together, our websites and personal networks can mobilize the planet to defend the internet from bad laws &amp; monopolies. Are you in?</p>
 
         <div style="float: left; width: 600px; margin-top: 0px; margin-left: 335px; white-space: nowrap;">
-					<form class="action_form" name="act" method="POST" action="http://a.fightforthefuture.org/act/" accept-charset="utf-8">
+					<form class="action_form" name="act" method="POST" action="http://nt.salsalabs.com/save" accept-charset="utf-8">
 	
 	
-						<input type="hidden" name="utf8" value="&#x2714;">
-	          <ul class="compact" id="ak-errors"></ul>
+				
 						
 						<div style="margin:0;padding:0;display:inline">
 
-						<input id="id_website" type="text" name="user_website" placeholder="Your Website" onfocus="if(this.value=='Your Website')this.value=''" onblur="if(this.value=='')this.value='Your Website'" value="Your Website" style="width:280px; height: 40px; margin-top: 11px; float: left; "  />
+						<input id="id_website" type="text" name="Web_Page" placeholder="Your Website" onfocus="if(this.value=='Your Website')this.value=''" onblur="if(this.value=='')this.value='Your Website'" value="Your Website" style="width:280px; height: 40px; margin-top: 11px; float: left; "  />
 						
-												<input id="id_email" type="text" name="email" placeholder="Your Email" onfocus="if(this.value=='Your Email')this.value=''" onblur="if(this.value=='')this.value='Your Email'" value="Your Email" style="width:280px; height: 40px; margin-top: 11px; float: left; margin-left: 10px;"  />
+												<input id="id_email" type="text" name="Email" placeholder="Your Email" onfocus="if(this.value=='Your Email')this.value=''" onblur="if(this.value=='')this.value='Your Email'" value="Your Email" style="width:280px; height: 40px; margin-top: 11px; float: left; margin-left: 10px;"  />
 						<!-- <input id="user_email" name="user[email]" placeholder="email address" size="30" type="text"> -->
 
               <div style="clear: both; font-size: 9pt; float: left;">
                 Can be anything! Blog, Tumblr, YouTube<br>
                 channel, Twitter stream, etc.
-								<input type="hidden" name="page" value="idl_p">
 
-											<input type="hidden" name="lists" value="1" />
+
+								<input type="hidden" name="organization_KEY" value="501"/>
+								<input type="hidden" name="redirect" value="http://fightforthefuture.org/thanks"> 
+								<input type="hidden" name="object" value="supporter"/>
+								<input type="hidden" name="link" value="groups"/>
+								<input type="hidden" name="linkKey" value="8"/>
+								<input type="hidden" name="ip" id="signup_ip" />
+								<input type="hidden" name="user_agent" id="user_agent" />
+								<input type="hidden" name="receive_email" value="3">
+								
+								
+								
               </div><button id="gotime" style="float: right; clear: auto; margin-right: 20px;" type="submit"><span>Join The League</span></button>
             </div>
           </form>
@@ -257,5 +264,16 @@ $("#donation_amount").keyup(function(event){
 		});		
 
 	</script>
+	
+	
+	<script type="application/javascript">
+	    function getip(json){
+				$('#signup_ip').val(json.ip);
+	    }
+
+	$("#user_agent").val(navigator.userAgent);
+	</script>
+
+	<script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
 </body>
 </html>
