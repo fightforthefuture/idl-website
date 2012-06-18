@@ -37,7 +37,7 @@ html, body {
 height: 2300px;
    width: 1000px;
    margin: 0px auto 0px auto;
-   /*background: #000 url(../images/badges/IDL.blue.jpg) no-repeat;*/
+   background: #000 url(../images/IDL.blue.png) no-repeat;
    -moz-box-shadow: 0 0 10px 5px #292527;
    -webkit-box-shadow: 0 0 10px 5px #292527;
 }
