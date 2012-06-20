@@ -3,5 +3,10 @@
 .DS_Store
 IDL_Public_websites.esproj/Project.espressostorage
 IDL_Public_websites.esproj/user.Deuce.espressostorage
+<<<<<<< HEAD
 user.Deuce.espressostorage
 Project.espressostorage
+=======
+Project.espressostorage
+user.Deuce.espressostorage
+>>>>>>> 9354fd46a70722025d17a2f6ecff05703fef376c
