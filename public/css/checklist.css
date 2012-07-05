@@ -290,7 +290,7 @@ margin-bottom: 15px;
 }
 
 .peach {
-	height: 400px;
+	height: 450px;
 	background: url('/images/city.png')  center bottom no-repeat, -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #B77622), color-stop(1, #F6A335) );
 	background: url('/images/city.png') center bottom no-repeat, -moz-linear-gradient( center top, #B77622 5%, #F6A335 100% );
 }
