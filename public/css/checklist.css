@@ -519,6 +519,16 @@ margin-top: -7px;
 margin-bottom: 10px;
 }
 
+.caption_txt{
+font-family: "Palatino", "Georgia", serif;
+font-size: 11pt;
+color: #FFF;
+margin-top: 10px;
+margin-bottom: 10px;
+font-style: italic;
+line-height: 20px;
+}
+
 .yellow_price{
 font-family: "Helvetica", "Arial", sans-serif;
 font-size: 16pt;
@@ -527,6 +537,34 @@ color: #ece400;
 margin-bottom: -20px;
 margin-top: 15px;
 }
+
+a.green:link{
+font-family: "Helvetica", "Arial", sans-serif;
+font-size: 12pt;
+font-weight: 800;
+color: #9ab40b;
+padding: 5px;
+margin-bottom: -20px;
+margin-top: 15px;
+text-decoration: none;
+-moz-border-radius: 5px; /* from vector shape */
+-webkit-border-radius: 5px; /* from vector shape */
+border-radius: 5px; /* from vector shape */
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box; /* prevents bg color from leaking outside the border */
+background-color: #7aaae7; /* layer fill content */
+}
+a.green:hover{
+font-family: "Helvetica", "Arial", sans-serif;
+font-size: 12pt;
+font-weight: 800;
+color: #FFF;
+padding: 5px;
+margin-bottom: -20px;
+margin-top: 15px;
+}
+
 
 #small_pod{
 width: 250px;
