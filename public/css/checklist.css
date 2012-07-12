@@ -589,14 +589,18 @@ padding: 20px;
 margin-bottom: 25px;
 }
 
-button#launch_donate_btn, a.launch_donate_btn{
+button#launch_donate_btn, #leadin a.launch_donate_btn{
+display: block;
+text-decoration: none;
+text-align: center;
 font-family: 'BebasNeueRegular', "Helvetica", "Arial", sans-serif;
 color: #FFF;
 font-size: 20pt;
 text-shadow: 0 1px 0 #3e4c0e; /* drop shadow */
 margin-top: 20px;
 width: 250px;
-height: 48px;
+padding-top: 10px;
+height: 40px;
 border: 1px solid #579903; /* inner stroke */
 -moz-border-radius: 11px; /* from vector shape */
 -webkit-border-radius: 11px; /* from vector shape */
@@ -623,14 +627,8 @@ background-image: -webkit-linear-gradient(90deg, #3e7000 0%, #7edd04 100%); /* g
 background-image: linear-gradient(90deg, #3e7000 0%, #7edd04 100%); /* gradient overlay */
 }
 
-button#launch_donate_btn:hover, a.launch_donate_btn:hover{
-font-family: 'BebasNeueRegular', "Helvetica", "Arial", sans-serif;
-color: #FFF;
-font-size: 20pt;
-text-shadow: 0 1px 0 #3e4c0e; /* drop shadow */
-margin-top: 20px;
-width: 250px;
-height: 48px;
+button#launch_donate_btn:hover, #leadin  a.launch_donate_btn:hover{
+
 border: 1px solid #579903; /* inner stroke */
 -moz-border-radius: 11px; /* from vector shape */
 -webkit-border-radius: 11px; /* from vector shape */
