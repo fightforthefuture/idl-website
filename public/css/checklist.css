@@ -452,12 +452,37 @@ font-size:12pt;
 	padding-top: 23px;
 }
 
+#banner_main_idl{
+	background: url('../images/note_banner.png') no-repeat;
+	width: 1016px;
+	height: 79px;
+	margin-left: -8px;
+	margin-bottom: -32px;
+	padding-top: 23px;
+	z-index: 300;
+	position:relative;
+}
+
 
 #banner_txt{
 	font-family: 'Montserrat', sans-serif;
 	color: #FFF; /* text color */
 	text-shadow: 0 1px 1px #000; /* drop shadow */
 	font-size:21pt;
+}
+
+#banner_txt_main{
+	font-family: 'Montserrat', sans-serif;
+	color: #FFF; /* text color */
+	text-shadow: 0 1px 1px #000; /* drop shadow */
+	font-size:17pt;
+}
+
+#banner_txt_main a{
+	font-family: 'Montserrat', sans-serif;
+	color: #FAE636; /* text color */
+	text-shadow: 0 1px 1px #000; /* drop shadow */
+	font-size:17pt;
 }
 
 #right_body{
