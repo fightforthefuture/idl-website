@@ -585,30 +585,33 @@ background: url('../images/launch/note.png') no-repeat;
 }
 
 a.green:link{
-font-family: "Helvetica", "Arial", sans-serif;
-font-size: 12pt;
-font-weight: 800;
-color: #9ab40b;
-padding: 5px;
-margin-bottom: -20px;
-margin-top: 15px;
-text-decoration: none;
--moz-border-radius: 5px; /* from vector shape */
--webkit-border-radius: 5px; /* from vector shape */
-border-radius: 5px; /* from vector shape */
--moz-background-clip: padding;
--webkit-background-clip: padding-box;
-background-clip: padding-box; /* prevents bg color from leaking outside the border */
-background-color: #7aaae7; /* layer fill content */
+	margin-left: 10px;
+	display: inline-block;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 66px; height: 28px; -moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border-radius: 5px;
+	-moz-background-clip: padding; 
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.2) / drop shadow /, inset 0 0 3px rgba(255,255,255,.1) / inner glow /; 			
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2) / drop shadow /, inset 0 0 3px rgba(255,255,255,.1) / inner glow /; 	
+	box-shadow: 0 1px 1px rgba(0,0,0,.2) / drop shadow /, inset 0 0 3px rgba(255,255,255,.1) / inner glow /;
+
+background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDY2IDI4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImhhdDAiIGdyYWRpZW50VW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiB4MT0iNTAlIiB5MT0iMTAwJSIgeDI9IjUwJSIgeTI9Ii0xLjQyMTA4NTQ3MTUyMDJlLTE0JSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM1ZjkzMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhZmQxMDkiIHN0b3Atb3BhY2l0eT0iMSIvPgogICA8L2xpbmVhckdyYWRpZW50PgoKPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjY2IiBoZWlnaHQ9IjI4IiBmaWxsPSJ1cmwoI2hhdDApIiAvPgo8L3N2Zz4=);
+
+background-image: -moz-linear-gradient(90deg, #5f9300 0%, #afd109 100%);
+background-image: -o-linear-gradient(90deg, #5f9300 0%, #afd109 100%);
+background-image: -webkit-linear-gradient(90deg, #5f9300 0%, #afd109 100%);
+background-image: linear-gradient(90deg, #5f9300 0%, #afd109 100%); / gradient overlay */
+
 }
 a.green:hover{
-font-family: "Helvetica", "Arial", sans-serif;
-font-size: 12pt;
-font-weight: 800;
-color: #FFF;
-padding: 5px;
-margin-bottom: -20px;
-margin-top: 15px;
+
 }
 
 
