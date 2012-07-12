@@ -538,6 +538,15 @@ margin-bottom: -20px;
 margin-top: 15px;
 }
 
+#note_left{
+float: left;
+width: 232px;
+height: 58px;
+margin-left: -8px;
+margin-top: -85px;
+background: url('../images/launch/note.png') no-repeat;
+}
+
 a.green:link{
 font-family: "Helvetica", "Arial", sans-serif;
 font-size: 12pt;
