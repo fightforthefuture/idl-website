@@ -33,16 +33,18 @@ html, body {
    font-family: "Helvetica", "Arial", sans-serif;
    background: #000;
    background: #000 url(../images/bkg.png);
+	text-align: center;
 }
 #wrapper {
    color: #fff;
 /*   height: 25.1in;*/
 /*   height: 2300px;*/
    width: 1000px;
-   margin: 0px auto 0px auto;
+   margin: 0px auto;
    background: #000 url(../images/IDL.blue.png) no-repeat;
    -moz-box-shadow: 0 0 10px 5px #292527;
    -webkit-box-shadow: 0 0 10px 5px #292527;
+	text-align: left;
 }
 .wrap {width: 950px; margin: 0 auto; }
 #container {
@@ -366,7 +368,8 @@ a.dev {clear: both; width: 100%; display: block; height: 30px; }
 #badges_intro {
    padding: 0px 0px 10px 40px;
 /*   background: #000 url(../images/header.2.png) no-repeat 0px 0px;*/
-   height: 1400px;
+/*   height: 1400px;*/
+overflow: auto;
    background-color: transparent;
 }
 
@@ -655,6 +658,7 @@ margin-bottom: 25px;
 }
 
 button#launch_donate_btn, #leadin a.launch_donate_btn{
+	background-color: green;
 display: block;
 text-decoration: none;
 text-align: center;
