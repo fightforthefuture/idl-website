@@ -196,7 +196,7 @@
 $("a.donate_gotime").click(function(event) {
   event.preventDefault();
 	var amount_value = $("input#donation_amount").val();
-  window.location = "https://fftf.actionkit.com/donate/idl-donate&amount=" + amount_value;
+  window.location = "https://fftf.actionkit.com/donate/idl-donate?amount=" + amount_value;
 });
 
 $("#donation_amount").keyup(function(event){
