@@ -588,6 +588,7 @@ background: url('../images/launch/note.png') no-repeat;
 }
 
 a.green:link{
+	background-color: green;
 	
 	
 	-moz-box-shadow:0 2px 1px rgba(30,45,66,.6) /* drop shadow */,
@@ -697,7 +698,6 @@ background-image: linear-gradient(90deg, #3e7000 0%, #7edd04 100%); /* gradient 
 }
 
 button#launch_donate_btn:hover, #leadin  a.launch_donate_btn:hover{
-
 border: 1px solid #579903; /* inner stroke */
 -moz-border-radius: 11px; /* from vector shape */
 -webkit-border-radius: 11px; /* from vector shape */
@@ -727,3 +727,4 @@ background-image: linear-gradient(90deg, #3e7000 0%, #61a50b 99.24%, #61a50b 100
 /* END - Launch page CSS */
 
 /* @end */
+span.strike {text-decoration: line-through;}
