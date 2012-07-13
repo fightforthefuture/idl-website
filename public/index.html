@@ -189,14 +189,14 @@
 
           <p class="step-text">Our organization and network helped to defeat SOPA/PIPA (by making the innovative tools that powered the largest online protest in history).&nbsp; The Internet Defense League continues this work. But it depends on its&nbsp; members' donations for its tiny staff to keep working behind the scenes.&nbsp; Your donation makes us stronger AND and helps us fight to win.
 	
-<span style="margin: 0 auto; width: 288px; overflow: auto; display: block; margin-top: 20px;">	<span style="float: left; margin-top: 13px; margin-right: 5px;">$</span> <input id="donation_amount" style="text-align: center; float: left;width: 50px; height: 53px; display: inline-block;" placeholder="25"/><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LHUDUQJ8JTXD6&amp;amount=100" class="donate_gotime" style="float: left;margin: 0; display: inline-block;"><span>DONATE</span></a>
+<span style="margin: 0 auto; width: 288px; overflow: auto; display: block; margin-top: 20px;">	<span style="float: left; margin-top: 13px; margin-right: 5px;">$</span> <input id="donation_amount" style="text-align: center; float: left;width: 50px; height: 53px; display: inline-block;" placeholder="25"/><a href="https://fftf.actionkit.com/donate/idl-donate/" class="donate_gotime" style="float: left;margin: 0; display: inline-block;"><span>DONATE</span></a>
 
 <script>
 
 $("a.donate_gotime").click(function(event) {
   event.preventDefault();
 	var amount_value = $("input#donation_amount").val();
-  window.location = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LHUDUQJ8JTXD6&amount=" + amount_value;
+  window.location = "https://fftf.actionkit.com/donate/idl-donate?amount=" + amount_value;
 });
 
 $("#donation_amount").keyup(function(event){
