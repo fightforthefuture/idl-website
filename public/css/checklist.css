@@ -509,6 +509,8 @@ font-size:12pt;
 	font-size: 15pt; font-weight: normal; margin: 0px 0px 12px 0px;  font-family: 'Montserrat', sans-serif;  color: #fff;
 }
 
+ol
+
 .launch_images{
 margin-top: 25px;
 border: 3px solid #fff; /* inner stroke */
@@ -725,6 +727,23 @@ background-image: linear-gradient(90deg, #3e7000 0%, #61a50b 99.24%, #61a50b 100
 
 }
 /* END - Launch page CSS */
+
+/* START - FAQ Page */
+dt {
+	 font-family: 'Montserrat', 'arial', sans-serif;
+	 font-size: 15pt;
+     margin: 15px 50px 5px;
+}
+ 
+dd {
+     margin: 25px 50px 0px;
+     border-bottom: 1px solid #C8E5FB;
+     padding-bottom: 20px;
+     line-height: 150%;
+}
+
+
+/* END - FAQ page */
 
 /* @end */
 span.strike {text-decoration: line-through;}
