@@ -8,7 +8,9 @@ use Rack::Static , :urls => {
     "/launch/" => "launch/index.html",
     "/launch" => "launch/index.html",
     "/confirm/" => "confirm/index.html", 
-    "/confirm" => "confirm/index.html", 
+    "/confirm" => "confirm/index.html",
+    "/faq/" => "faq/index.html", 
+    "/faq" => "faq/index.html", 
     } , :root => "public"
 
 run Rack::URLMap.new({
