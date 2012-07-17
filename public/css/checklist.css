@@ -747,3 +747,13 @@ dd {
 span.strike {text-decoration: line-through;}
 
 .oleo {font-family: 'Oleo Script', cursive;}
+
+#small_pod a.bebas {width: 200px;}
+
+#banner_txt {text-align: center; font-size: 22px; margin-top: -5px;}
+
+#banner form {text-align: center;font-size: 22px; margin-top: -5px;}
+
+form#banner_emails input {margin-left: 10px;float: none; display: inline-block; font-weight: regular; width: 150px; text-align: center; border: 2px solid #a73e3f;}
+
+form#banner_emails button {padding: 15px; padding-left: 5px;border: none; background: none; color: #fff; font-size: 22px;}

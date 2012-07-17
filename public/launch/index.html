@@ -31,7 +31,15 @@
 				.call-to-action {padding-top: 100px; overflow: hidden;}
 				
 				#note_left {display: none;}
-				</style>				
+				
+				#small_pod {width: 300px;}
+				#banner {padding-top: -120px}
+				.paypals {float: left; margin-left: 0px; display: none;}
+				form#banner_emails button {padding-top: 0; margin-top: 0;}
+				form#banner_emails {clear: both; margin-top: 10px; margin-left: 270px;}
+				form#banner_emails label, form#banner_emails button, form#banner_emails input {float: left;}
+				form#banner_emails input {height: 30px;}
+					</style>				
 				<![endif]-->
 				<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie7.css"><![endif]-->
 			
@@ -58,8 +66,8 @@
       	</div>
       	<a id="note_left" href="http://internetdefenseleague.org"></a>
       	<div id="banner">
-			<p id="banner_txt" style="text-align: center; font-size: 22px; margin-top: -5px;">July 19:IDL launches, blasting cat signals all over the internet and in real life</p>
-			<form style="text-align: center;font-size: 22px; margin-top: -5px;" action="http://nt.salsalabs.com/save">
+			<p id="banner_txt">July 19:IDL launches, blasting cat signals all over the internet and in real life</p>
+			<form id="banner_emails" action="http://nt.salsalabs.com/save">
 				<input type="hidden" name="organization_KEY" value="501"/>
 									<input type="hidden" name="redirect" value="http://internetdefenseleague.org/thanks"> 
 									<input type="hidden" name="object" value="supporter"/>
@@ -68,9 +76,10 @@
 									<input type="hidden" name="Receive_Email" value="3">
 									
 									
-				<label><strong>Sign up</strong> to join the launch <input type="email" name="Email" placeholder="Your email" style="margin-left: 10px;float: none; display: inline-block; font-weight: regular; width: 150px; text-align: center; border: 2px solid #a73e3f;"/> <button style="padding: 15px; padding-left: 5px;border: none; background: none; color: #fff; font-size: 22px;" class="oleo">Submit</button>
+				<label><strong>Sign up</strong> to join the launch</label> <input type="email" name="Email" placeholder="Your email" /> <button class="oleo">Submit</button>
 			</form>
       	</div>
+
       	
       	<div id="left_body"><h3 id="launch">So let's make it epic.  The plan?  While member sites broadcast the news online, we blast our "cat signal" into the sky with crowd-funded spotlights in cities around the world (on Batman's opening night!)</h3>
       	<img class="launch_images" src="/images/launch/cat_signal.jpg" alt="Cat Signal">
@@ -113,7 +122,7 @@
 			<p class="small_pod_txt">On Thursday July 19, as people go to midnight showings of Batman, we are going to run 5 spotlights in 5 cities blasting beams of light into the sky, and our cat signal on neighboring buildings. But we need your help to make it happen!</p>
 			<a href="https://fftf.actionkit.com/donate/idl-donate" class="launch_donate_btn"><span>Fund This Project</span></a>
 			
-						<a  class="bebas" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAKBJLWU5TQR2" style="display: inline-block; float: left; text-align: center; font-size: 24px; margin-top: 40px; width: 200px;margin-left: 20px; ">Donate with <!-- PayPal Logo --><img  src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" border="0" alt="PayPal Logo" style="float: right; margin-right: 10px; margin-top: -5px;"></a>
+						<div class="paypals"><a  class="bebas" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAKBJLWU5TQR2" style="display: inline-block; float: left; text-align: center; font-size: 24px; margin-top: 40px; margin-left: 20px; ">Donate with <!-- PayPal Logo --><img  src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" border="0" alt="PayPal Logo" style="float: right; margin-right: 10px; margin-top: -5px;"></a></div>
       	</div>
       	
       	<div id="small_pod">
@@ -231,7 +240,11 @@
 	    
 	  </div>
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://s3.amazonaws.com/fftf.media/img/placeholder.js"></script>
 	  	<script type="application/javascript">
+	
+
+				
 			    function getip(json){
 		//	      alert(json.ip); // alerts the ip address
 						$('#signup_ip').val(json.ip);
@@ -244,6 +257,9 @@
 			
 
 	<script type="text/javascript">
+	$(function() {
+		 $('input').placeholder();
+		});
 
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-26978317-6']);
