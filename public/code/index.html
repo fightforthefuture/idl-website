@@ -1,6 +1,4 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
+<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -22,6 +20,7 @@
 			
 			
 			<style>
+				h2.montserrat,h3.montserrat {text-align: center; width: 100%; margin: 0 auto;}
 				.works li {color: #fff;}
 				#intro {color: #fff;}
 				a {color: #e5da2c;}
@@ -70,6 +69,7 @@
 					-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.25); /* inner shadow */
 					box-shadow: inset 0 0 3px rgba(0,0,0,.25); /* inner shadow */
 					border: 1px solid #b8b8b8; /* inner stroke */
+					margin-left: 50px;
 				}
 				
 				.dark a.customize {
@@ -88,6 +88,7 @@
 				}
 				
 				.indented {
+					
 					-moz-border-radius: 10px; /* from vector shape */
 					-webkit-border-radius: 10px; /* from vector shape */
 					border-radius: 10px; /* from vector shape */
@@ -104,6 +105,7 @@
 				}
 				
 				.small {
+					text-align: center;
 					width: 350px;
 					height: 318px;
 					float: left;
@@ -178,22 +180,37 @@
 				fieldset {border: none; font-size: 12px; margin-left: 20px; margin-top: 10px;}
 				fieldset input, fieldset select {font-size: 11px; width: 190px; float: left;}
 				.small fieldset label {font-size: 12px; width: 100px; text-align: right; padding-right: 10px; padding-top: 5px;}
+				#intro {background: url(/images/code_bg.png) repeat-x; width: 958px; height: 1200px;}
 				
+				.gray {border: 0px solid #000; margin: 0 auto; margin-top: -10px; overflow: auto; padding-bottom: 40px; height: auto;}
+				.column {margin-left: 40px; padding-right: 20px;}
 			</style>
+			
+
+			<!--[if IE]>
+			<style>
+			a#tag {display: none;}
+			.indented {border: 1px solid #eee;}
+			.biggie span.inputs {width: 250px;}
+			.small span {width: 190px;}
+			
+			.row .small {height: 230px;}
+				</style>				
+			<![endif]-->
 			
 </head>
 
 <body>
  <a id="tag" href="http://fightforthefuture.org"  target="blank"></a>
  
-  <div id="wrapper code">
+  <div id="wrapper">
     <div id="container">
-      <div class="wrap" id="intro" style="background: url(/images/code_bg.png) repeat-x; width: 958px; height: 1200px;">
+      <div class="wrap" id="intro">
 				<h1 id="logo">Internet Defense League</h1>
 				<h2 class="montserrat">Join our campaigns for Internet freedom!</h2>
 				
 				<div class="indent dark large">
-					<h3 class="montserrat">Get the code for your site. <a href="">FAQ</a> <a href="">GitHub</a></h3>
+					<h3 class="montserrat">Get the code for your site. <a href="http://internetdefenseleague.org/faq">FAQ</a> <a href="https://github.com/fightforthefuture/internet_defense_league">GitHub</a></h3>
 					<textarea></textarea>
 					<p><a href="" class="customize">Customize code</a></p>
 				</div>
@@ -266,8 +283,8 @@
 </div>
 </div>
 
-      <div class="step gray call-to-action" style="border: 0px solid #000; margin: 0 auto; margin-top: -10px; overflow: auto; padding-bottom: 40px; height: auto;">
-        <div class="column" style="margin-left: 40px; padding-right: 20px;">
+      <div class="step gray call-to-action" >
+        <div class="column">
           <h3>What's in the works?</h3>
 
           <ul class="works">
@@ -285,17 +302,17 @@
           <p>Join the project to build the flexible JavaScript tools that make the Defense League tick.</p>
 
         	 <ul class="footer-nav">
-							<li><a href="https://github.com/fightforthefuture/internet_defense_league" class="dev"><img src="/images/github.png" > <span>GITHUB</span></a></li>
-							<li><a href="https://groups.google.com/forum/?fromgroups#!forum/internetdefenseleague" class="dev"><img src="/images/google.png" ><span>GOOGLE GROUP</span></a></li>
-								<li><a href="https://www.pivotaltracker.com/projects/453967" class="dev"><img src="/images/tracker.png" > <span>TRACKER</span></a></li>
-								<li><a href="https://twitter.com/Defense_League" class="dev"><img src="/images/twitter.png"><span>TWITTER</span></a></li>
+							<li><a href="https://github.com/fightforthefuture/internet_defense_league" class="dev"><img src="/images/github.png" alt="GitHub"> <span>GITHUB</span></a></li>
+							<li><a href="https://groups.google.com/forum/?fromgroups#!forum/internetdefenseleague" class="dev"><img src="/images/google.png" alt="Google Group"><span>GOOGLE GROUP</span></a></li>
+								<li><a href="https://www.pivotaltracker.com/projects/453967" class="dev"><img src="/images/tracker.png" alt="Pivotal Tracker"> <span>TRACKER</span></a></li>
+								<li><a href="https://twitter.com/Defense_League" class="dev"><img src="/images/twitter.png" alt="Twitter"><span>TWITTER</span></a></li>
 						</ul>
 	        </div>
 
-        <div class="column">
+        <div class="column" style="margin-left: 0px; width: 220px;">
           <h3>Who's behind it?</h3>
 
-          <p><a href="http://fightforthefuture.org">Fight for the Future,</a> the authors of several different SOPA blackout tools, and a growing group of volunteers, including <a href="https://www.cloudflare.com/">Cloudflare.</a> Be in touch.</p><a href="http://fightforthefuture.org"><img src="/images/fftf.logo.png" style="margin-top: 20px;"></a>
+          <p><a href="http://fightforthefuture.org">Fight for the Future,</a> the authors of several different SOPA blackout tools, and a growing group of volunteers, including <a href="https://www.cloudflare.com/">Cloudflare.</a> Be in touch.</p><a href="http://fightforthefuture.org"><img src="/images/fftf.logo.png" style="margin-top: 20px;" alt="Fight for the Future"></a>
           
           <h3 id="touch">Get in touch</h3>
           <p>If you run a big site and want to get in touch or if you want to get more involved, email us at <a href="mailto:team@fightforthefuture.org?Subject=IDL%20Big%20Site%20Contact">team@fightforthefuture.org.</a></p>
