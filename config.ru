@@ -13,6 +13,8 @@ use Rack::Static , :urls => {
     "/faq" => "faq/index.html",
     "/privacy/" => "privacy/index.html", 
     "/privacy" => "privacy/index.html",
+    "/members/" => "members/index.html", 
+    "/members" => "members/index.html", 
     } , :root => "public"
 
 run Rack::URLMap.new({

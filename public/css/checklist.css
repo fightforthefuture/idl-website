@@ -448,6 +448,55 @@ font-size:12pt;
 	margin-bottom: 25px;
 }
 
+/* START - Members page */
+
+#big_note{
+	background: url('../images/big_note.png') no-repeat;
+	width: 621px;
+	height: 99px;
+	margin-left: 160px;
+	margin-bottom: 25px;
+}
+
+#big_note_txt{
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+color: #000; /* text color */
+text-shadow: 0 1px 1px #fff; /* drop shadow */
+font-size:10pt;
+line-height: 18px;
+width: 450px;
+}
+
+#big_note_txt a{
+	color: black;
+	text-decoration: underline;
+}
+.websites{
+margin-top: 30px;
+width: 960px;
+margin-left: 90px;
+}
+.myList{
+list-style-type: none;
+float: left;
+width: 300px;
+padding-left: 0;
+margin-left: 0;
+padding-bottom: 40px;
+margin-bottom: 30px;
+}
+.myList li{
+margin-bottom: 10px;
+font-family: 'Montserrat', sans-serif; 
+
+}
+.myList li:before{
+content: url('../images/arrow.gif') left center no-repeat;
+margin-left: 0;
+margin-right:10px;
+}
+/* END - Members page */
+
 /* START - launch page CSS */
 #banner{
 	background: url('../images/launch/banner.png') no-repeat;
