@@ -629,6 +629,12 @@ font-style: italic;
 line-height: 20px;
 }
 
+.more_list{
+margin-right: 100px;
+display: block;
+float: left;
+}
+
 .yellow_price{
 font-family: "Helvetica", "Arial", sans-serif;
 font-size: 16pt;
