@@ -627,12 +627,13 @@ margin-top: 10px;
 margin-bottom: 10px;
 font-style: italic;
 line-height: 20px;
+text-align: center; 
+clear: both;
 }
 
 .more_list{
-margin-right: 100px;
-display: block;
-float: left;
+margin-top: -50px;
+margin-bottom: 30px;
 }
 
 .yellow_price{
