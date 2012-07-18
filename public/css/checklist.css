@@ -342,6 +342,15 @@ margin-bottom: 15px;
 .center-text { 	text-align: center; margin: 0px 40px; }
 
 
+#number{
+background: url('../images/number.png') no-repeat;
+height: 29px;
+width: 30px;
+position: relative;
+top: 82px;
+left: -25px;
+}
+
 .footer-nav {
   clear: both;
   font-family: 'BebasNeueRegular';
@@ -487,7 +496,7 @@ margin-bottom: 30px;
 }
 .myList li{
 margin-bottom: 10px;
-font-family: 'Montserrat', sans-serif; 
+font-family: 'Montserrat', sans-serif;
 
 }
 .myList li:before{
