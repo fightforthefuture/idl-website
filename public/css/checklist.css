@@ -619,6 +619,18 @@ margin-top: -7px;
 margin-bottom: 10px;
 }
 
+.global_logo{
+	margin-top: 20px;
+	float: left;
+	margin-left: 280px;
+	display: block;
+    width: 480px;
+    height: 225px;
+    text-indent: -999em;
+    overflow: hidden;
+    font-size: 40pt;
+}
+
 .caption_txt{
 font-family: "Palatino", "Georgia", serif;
 font-size: 11pt;
