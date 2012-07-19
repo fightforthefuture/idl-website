@@ -624,11 +624,13 @@ margin-bottom: 10px;
 	float: left;
 	margin-left: 280px;
 	display: block;
-    width: 480px;
-    height: 225px;
+    width: 460px;
+    height: 60px;
     text-indent: -999em;
     overflow: hidden;
     font-size: 40pt;
+    z-index: 500;
+    position: relative;
 }
 
 .caption_txt{
