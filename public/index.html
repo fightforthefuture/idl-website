@@ -86,6 +86,10 @@
 				margin-left: 25px;
 				margin-top: 15px;
 			}
+			
+			#twitter_modal select {
+				width: 235px;
+			}
 
 			.well {
 				height: 85px;
@@ -193,13 +197,17 @@
 			
 			form#tweez {
 				float: left;
-				background: url(http://radiant-earth-4575.herokuapp.com//assets/twitter_logo.jpg) no-repeat 350px 0px;
+				background: url(http://radiant-earth-4575.herokuapp.com/assets/twitter_logo.jpg) no-repeat 350px 0px;
 				width: 580px;
 			}
 			
-			form#tweez button, form#tweez select {
+			form#tweez button {
 				float: left;
 				clear: left;
+			}
+			
+			fieldset {
+				clear: left; float: left; width: 400px; border: none;
 			}
 			</style>
 			
@@ -462,15 +470,19 @@ $("#donation_amount").keyup(function(event){
 		<form action="http://radiant-earth-4575.herokuapp.com//auth/twitter_prep" method="POST" id="tweez">
 		  <label for="email">Your email<span> (Optional)</span></label>
 		  <input type="text" name="email" style="border: 1px solid black;">
+<fieldset>
+			<label style="float: left; clear: left; margin-top: 10px; padding-right: 10px;">Max</label>
 		  <select name="frequency">
-			  <option value="1">Tweet once a day</option>
+			  <option value="1" selected>Tweet once a day</option>
 			  <option value="2">Tweet once a week</option>
-			  <option value="3" selected>Tweet once a month</option>
+			  <option value="3">Tweet once a month</option>
 			  <option value="4">Tweet three times a year</option>
 		  </select>
+		</fieldset>
 		  <button type="submit" class="twitter blau" style="float:left;">Authorize with Twitter</button>
 		</form>
 	</div>
+	 
 	<script>
 	$(document).ready(function() {
 		$('button[rel=tmodal]').click(function(e) {
