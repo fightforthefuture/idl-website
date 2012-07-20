@@ -470,7 +470,7 @@ $("#donation_amount").keyup(function(event){
 
 		<form action="http://radiant-earth-4575.herokuapp.com//auth/twitter_prep" method="POST" id="tweez">
 		  <label for="email">Your email<span> (Optional)</span></label>
-		  <input type="text" name="email" style="border: 1px solid black;">
+		  <input type="text" name="email" id="emaildudez" style="border: 1px solid black;">
 <fieldset>
 			<label style="float: left; clear: left; margin-top: 10px; padding-right: 10px;">Max</label>
 		  <select name="frequency">
@@ -480,17 +480,73 @@ $("#donation_amount").keyup(function(event){
 			  <option value="4">Tweet three times a year</option>
 		  </select>
 		</fieldset>
-		  <button type="submit" class="twitter blau" style="float:left;">Authorize with Twitter</button>
+		  <button id="submitbutton" type="submit" class="twitter blau" style="float:left;">Authorize with Twitter</button>
 		</form>
 	</div>
 	 
 	<script>
+	
+	
+	
+	    function getip(json){
+				$('#signup_ip').val(json.ip);
+	    }
+
+	$("#user_agent").val(navigator.userAgent);
+	</script>
+
+	<script type="application/javascript" src="http://fftf-ips.heroku.com/?callback=getip"></script>
+<script>
+	
+	
+	 $(function(){
+	        $('#submitbutton').click(function(e){ // when clicked runs this code
+						e.preventDefault();
+		if( $("#emaildudez").val() ) {
+	            $.ajax({
+	              url: "http://nt.salsalabs.com/save",
+	              type: "POST",
+	              data: { 
+										Email: $('#emaildudez').val(), 
+										email_trigger_KEYS: "3",
+										organization_KEY: "-501", 
+										redirect: "http://internetdefenseleague.org/confirm", 
+										object: "supporter", 
+										link: "groups", 
+										linkKey: "8", 
+										ip: $('#signup_ip').val(), 
+										user_agent: navigator.userAgent, 
+										Receive_Email: "10",
+								},
+								success : true,
+	              });
+								window.setTimeout(
+								    function() {
+								        $('form#tweez').submit()
+								    },
+								    500
+								);
+							} else {
+								 $('form#tweez').submit();
+								}
+	        });
+	    });
+	
+			$(function() {
+			    if ( document.location.href.indexOf('#twitter') > -1 ) {
+						showModalPLZ();			    }
+			});
+			var showModalPLZ = function() {
+				$('#mask').css({'height': $(document).height(), 'width': $(document).width()});
+				$('#twitter_modal, #mask').show();	
+		    $('#banner_main_idl').hide();				
+			}
+	
 	$(document).ready(function() {
 		$('button[rel=tmodal]').click(function(e) {
 			e.preventDefault();
-			$('#mask').css({'height': $(document).height(), 'width': $(document).width()});
-			$('#twitter_modal, #mask').show();	
-	    $('#banner_main_idl').hide();
+			showModalPLZ();
+			
 		});
 		$('#mask').live('click', function() {
 			$('#mask').fadeOut(200);
@@ -518,15 +574,5 @@ $("#donation_amount").keyup(function(event){
 
 	</script>
 	
-	
-	<script type="application/javascript">
-	    function getip(json){
-				$('#signup_ip').val(json.ip);
-	    }
-
-	$("#user_agent").val(navigator.userAgent);
-	</script>
-
-	<script type="application/javascript" src="http://fftf-ips.heroku.com/?callback=getip"></script>
 </body>
 </html>
