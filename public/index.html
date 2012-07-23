@@ -292,23 +292,23 @@
           </div>
         </div>
       </div>
-	  <div id="banner_main_idl"><p id="banner_txt_main" style="margin-left: 63px;">The League is launching Today, sign up now and check out our <a href="http://internetdefenseleague.org/launch">launch plan.</a></p></div>
+	  <div id="banner_main_idl"><p id="banner_txt_main" style="margin-left: 63px;">The League is <a href="/launched">launched</a>, sign up now and check out <a href="/launched">photos from the parties.</a></p></div>
       
         <div class="step blue">
         <div class="step-container">
           <!-- <div id="number"></div> -->
-          <h2 style="margin-top: 60px;">The league is launching today.</h2>
-          <p class="step-text">People are blasting cat signals all over the internet, you should too. <br><a href="#intro">Sign up</a>, then <a href="http://members.internetdefenseleague.org/">get the code.</a></p>
+          <h2 style="margin-top: 60px;">The League is <a href="/launched">launched</a>!</h2>
+          <p class="step-text">People are blasting cat signals all over the internet and IRL, you should too. <br><a href="#intro">Sign up</a>, then <a href="http://members.internetdefenseleague.org/">get the code.</a></p>
         </div>
          <div class="step-icon">
-          <img src="images/getcode.png">
+          <a href="/launched"><img src="images/getcode.png"></a>
         </div>
         </div>
       
       
       <div class="step peach">
       <div class="center-text" style=" padding-bottom: 30px;">
-      <h2 style="margin-top: 40px;">Early members of the league<br><span style="font-family: palatino, georgia, serif; color:white; font-size: 14pt; font-style:italic"><a href="http://www.internetdefenseleague.org/members">See full list of members</a></span></h2>
+      <h2 style="margin-top: 40px;">Early members of the League<br><span style="font-family: palatino, georgia, serif; color:white; font-size: 14pt; font-style:italic"><a href="http://www.internetdefenseleague.org/members">See full list of members</a></span></h2>
 
       </div>
       <ul class="partlogos">
@@ -399,7 +399,7 @@
         <div class="center-text" style=" padding-bottom: 30px;">
           <h2 style="margin-top: 60px;">Support the network. Become a member.</h2>
 
-          <p class="step-text">Our organization and network helped to defeat SOPA/PIPA (by making the innovative tools that powered the largest online protest in history).&nbsp; The Internet Defense League continues this work. But it depends on its&nbsp; members' donations for its tiny staff to keep working behind the scenes.&nbsp; Your donation makes us stronger AND and helps us fight to win.
+          <p class="step-text">Our organization and network helped to defeat SOPA/PIPA (by making the innovative tools that powered the largest online protest in history).&nbsp; The Internet Defense League continues this work. But it depends on its&nbsp; members' donations for its tiny staff to keep working behind the scenes.&nbsp; Your donation makes us stronger AND helps us fight to win.
 	
 <span style="margin: 0 auto; width: 288px; overflow: auto; display: block; margin-top: 20px;">	<span style="float: left; margin-top: 13px; margin-right: 5px;">$</span> <input id="donation_amount" style="text-align: center; float: left;width: 50px; height: 53px; display: inline-block;" placeholder="25"/><a href="https://fftf.actionkit.com/donate/idl-donate" class="donate_gotime" style="float: left;margin: 0; display: inline-block;"><span>DONATE</span></a>
 
@@ -470,9 +470,9 @@ $("#donation_amount").keyup(function(event){
 			<p style="margin-left: 0px; padding: 20px; font-family: 'Verdana', sans-serif;">We're building a network of Twitter users to re-broadcast urgent alerts. Will you let the IDL post to your Twitter?</p>
 		</div>
 
-		<form action="http://radiant-earth-4575.herokuapp.com//auth/twitter_prep" method="POST" id="tweez">
+		<form action="http://radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST" id="tweez">
 		  <label for="email">Your email<span> (Optional)</span></label>
-		  <input type="text" name="email" style="border: 1px solid black;">
+		  <input type="text" name="email" id="emaildudez" style="border: 1px solid black;">
 <fieldset>
 			<label style="float: left; clear: left; margin-top: 10px; padding-right: 10px;">Max</label>
 		  <select name="frequency">
@@ -482,17 +482,73 @@ $("#donation_amount").keyup(function(event){
 			  <option value="4">Tweet three times a year</option>
 		  </select>
 		</fieldset>
-		  <button type="submit" class="twitter blau" style="float:left;">Authorize with Twitter</button>
+		  <button id="submitbutton" type="submit" class="twitter blau" style="float:left;">Authorize with Twitter</button>
 		</form>
 	</div>
 	 
 	<script>
+	
+	
+	
+	    function getip(json){
+				$('#signup_ip').val(json.ip);
+	    }
+
+	$("#user_agent").val(navigator.userAgent);
+	</script>
+
+	<script type="application/javascript" src="http://fftf-ips.heroku.com/?callback=getip"></script>
+<script>
+	
+	
+	 $(function(){
+	        $('#submitbutton').click(function(e){ // when clicked runs this code
+						e.preventDefault();
+		if( $("#emaildudez").val() ) {
+	            $.ajax({
+	              url: "http://nt.salsalabs.com/save",
+	              type: "POST",
+	              data: { 
+										Email: $('#emaildudez').val(), 
+										email_trigger_KEYS: "3",
+										organization_KEY: "-501", 
+										redirect: "http://internetdefenseleague.org/confirm", 
+										object: "supporter", 
+										link: "groups", 
+										linkKey: "8", 
+										ip: $('#signup_ip').val(), 
+										user_agent: navigator.userAgent, 
+										Receive_Email: "10",
+								},
+								success : true,
+	              });
+								window.setTimeout(
+								    function() {
+								        $('form#tweez').submit()
+								    },
+								    500
+								);
+							} else {
+								 $('form#tweez').submit();
+								}
+	        });
+	    });
+	
+			$(function() {
+			    if ( document.location.href.indexOf('#twitter') > -1 ) {
+						showModalPLZ();			    }
+			});
+			var showModalPLZ = function() {
+				$('#mask').css({'height': $(document).height(), 'width': $(document).width()});
+				$('#twitter_modal, #mask').show();	
+		    $('#banner_main_idl').hide();				
+			}
+	
 	$(document).ready(function() {
 		$('button[rel=tmodal]').click(function(e) {
 			e.preventDefault();
-			$('#mask').css({'height': $(document).height(), 'width': $(document).width()});
-			$('#twitter_modal, #mask').show();	
-	    $('#banner_main_idl').hide();
+			showModalPLZ();
+			
 		});
 		$('#mask').live('click', function() {
 			$('#mask').fadeOut(200);
@@ -520,15 +576,5 @@ $("#donation_amount").keyup(function(event){
 
 	</script>
 	
-	
-	<script type="application/javascript">
-	    function getip(json){
-				$('#signup_ip').val(json.ip);
-	    }
-
-	$("#user_agent").val(navigator.userAgent);
-	</script>
-
-	<script type="application/javascript" src="http://fftf-ips.heroku.com/?callback=getip"></script>
 </body>
 </html>
