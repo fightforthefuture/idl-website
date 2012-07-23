@@ -824,6 +824,126 @@ dd {
 
 /* END - FAQ page */
 
+/* START - IDL Branding page */
+.file_list_btn{
+float:left;
+margin-top: 100px;
+margin-left: 87px;
+margin-bottom: -20px;
+padding: 12px;
+font-family: 'BebasNeueRegular', "Helvetica", "Arial", sans-serif;
+color: #fff; /* text color + color overlay */
+text-shadow: 0 1px 0 #3e4c0e; /* drop shadow */
+font-size: 22pt;
+text-decoration: none;
+border: 1px solid #579903; /* inner stroke */
+-moz-border-radius: 11px; /* from vector shape */
+-webkit-border-radius: 11px; /* from vector shape */
+border-radius: 11px; /* from vector shape */
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box; /* prevents bg color from leaking outside the border */
+-moz-box-shadow:
+	0 3px 5px rgba(0,0,0,.4) /* drop shadow */,
+	inset 0 1px 0 rgba(255,255,255,.25) /* inner shadow */;
+-webkit-box-shadow:
+	0 3px 5px rgba(0,0,0,.4) /* drop shadow */,
+	inset 0 1px 0 rgba(255,255,255,.25) /* inner shadow */;
+box-shadow:
+	0 3px 5px rgba(0,0,0,.4) /* drop shadow */,
+	inset 0 1px 0 rgba(255,255,255,.25) /* inner shadow */;
+background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNlNzAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzdlZGQwNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+background-image: -moz-linear-gradient(90deg, #3e7000 0%, #7edd04 100%); /* gradient overlay */
+background-image: -o-linear-gradient(90deg, #3e7000 0%, #7edd04 100%); /* gradient overlay */
+background-image: -webkit-linear-gradient(90deg, #3e7000 0%, #7edd04 100%); /* gradient overlay */
+background-image: linear-gradient(90deg, #3e7000 0%, #7edd04 100%); /* gradient overlay */
+
+}
+
+.row{
+overflow: hidden;
+display: block;
+margin-top: -15px;
+}
+
+.subhead{
+text-align: center;
+margin-top: 30px;
+display: block;
+}
+
+.idl_logos{
+margin-left: 17px;
+margin-top: 15px;
+margin-bottom: 10px;
+}
+
+.wide_pod_img{
+float: left;
+margin-left: 32px;
+margin-top: 32px;
+margin-bottom: 15px;
+}
+
+.pod_links{
+font-size: 11pt;
+padding-left: 21px;
+margin-left: 20px;
+background: url('../images/badges/arrow_down.png') no-repeat;
+}
+
+.small_pod{
+width: 261px;
+height: 306px;
+float: left;
+margin-left: 40px;
+margin-top: 10px;
+margin-bottom: 50px;
+-moz-border-radius: 10px; /* from vector shape */
+-webkit-border-radius: 10px; /* from vector shape */
+border-radius: 10px; /* from vector shape */
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box; /* prevents bg color from leaking outside the border */
+background-color: #3d5b85; /* layer fill content */
+-moz-box-shadow:
+	0 1px 1px #88acda /* drop shadow */,
+	inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+-webkit-box-shadow:
+	0 1px 1px #88acda /* drop shadow */,
+	inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+box-shadow:
+	0 1px 1px #88acda /* drop shadow */,
+	inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+}
+
+.wide_pod{
+width: 861px;
+height: 261px;
+margin-top: 20px;
+margin-left: 40px;
+margin-bottom: 50px;
+-moz-border-radius: 10px; /* from vector shape */
+-webkit-border-radius: 10px; /* from vector shape */
+border-radius: 10px; /* from vector shape */
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box; /* prevents bg color from leaking outside the border */
+background-color: #3d5b85; /* layer fill content */
+-moz-box-shadow:
+	0 1px 1px #88acda /* drop shadow */,
+	inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+-webkit-box-shadow:
+	0 1px 1px #88acda /* drop shadow */,
+	inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+box-shadow:
+	0 1px 1px #88acda /* drop shadow */,
+	inset 0 1px 2px rgba(0,0,0,.75) /* inner shadow */;
+{
+
+
+/* END - IDL Branding page */
+
 /* @end */
 span.strike {text-decoration: line-through;}
 
