@@ -4,6 +4,7 @@ use Rack::Static , :urls => {
     "/details/2.html" => "details/2.html", 
     "/index.html" => "index.html", 
     "/thanks" => "thanks/index.html",
+    "/thanks/details.html" => "thanks/details.html",
     "/thanks/" => "thanks/index.html",
     "/badges/" => "badges/index.html",
     "/badges" => "badges/index.html",
