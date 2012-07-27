@@ -364,7 +364,45 @@ margin-top: 10px;
 
 .footer-nav a {text-decoration: none;}
 
-
+/* sign up and get code buttons */
+.sign_btn{
+margin-left: 5px;
+margin-right: 5px;
+margin-top: 0px;
+padding: 7px;
+font-family: 'Helvetica', "Arial", sans-serif;
+font-weight: 700;
+color: #fff; /* text color + color overlay */
+text-shadow: 0 1px 0 #3e4c0e; /* drop shadow */
+font-size: 11pt;
+text-decoration: none;
+-moz-border-radius: 3px; /* from vector shape */
+-webkit-border-radius: 3px; /* from vector shape */
+border-radius: 3px; /* from vector shape */
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box; /* prevents bg color from leaking outside the border */
+-moz-box-shadow:
+	0 1px 1px rgba(0,0,0,.75) /* drop shadow */,
+	inset 0 1px 0 rgba(255,255,255,.4) /* inner shadow */,
+	inset 0 0 0 1px rgba(255,255,255,.08) /* inner glow */,
+	0 0 0 1px #072b5f /* outer stroke */;
+-webkit-box-shadow:
+	0 1px 1px rgba(0,0,0,.75) /* drop shadow */,
+	inset 0 1px 0 rgba(255,255,255,.4) /* inner shadow */,
+	inset 0 0 0 1px rgba(255,255,255,.08) /* inner glow */,
+	0 0 0 1px #072b5f /* outer stroke */;
+box-shadow:
+	0 1px 1px rgba(0,0,0,.75) /* drop shadow */,
+	inset 0 1px 0 rgba(255,255,255,.4) /* inner shadow */,
+	inset 0 0 0 1px rgba(255,255,255,.08) /* inner glow */,
+	0 0 0 1px #072b5f /* outer stroke */;
+background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwNDdhYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ5OTFmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+background-image: -moz-linear-gradient(90deg, #0047ab 0%, #4991f7 100%); /* gradient overlay */
+background-image: -o-linear-gradient(90deg, #0047ab 0%, #4991f7 100%); /* gradient overlay */
+background-image: -webkit-linear-gradient(90deg, #0047ab 0%, #4991f7 100%); /* gradient overlay */
+background-image: linear-gradient(90deg, #0047ab 0%, #4991f7 100%); /* gradient overlay */
+}
 
 .activez {color: #3E3A3D;}
 
