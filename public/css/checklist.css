@@ -323,6 +323,7 @@ margin-bottom: 15px;
 }
 
 .red {
+	height: 400px;
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #751413), color-stop(1, #931717) );
 	background:-moz-linear-gradient( center top, #751413 5%, #931717 100% );
 }
