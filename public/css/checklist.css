@@ -218,7 +218,7 @@ button#gotime:active, a.donate_gotime:active {
 	top:1px;
 }
 
-a.donate_gotime {display: block; margin: 0 auto; margin-top: 20px; padding: 14px 0px; font-size: 30px; width: 200px;}
+a.donate_gotime {display: block; margin: 0 auto; margin-top: 20px; padding: 14px 0px; font-size: 30px; width: 190px;}
 
 a.donate_gotime span, button#gotime span {margin-top: 2px;}
 
