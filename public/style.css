@@ -62,3 +62,5 @@ button {width: 200px; height: 35px;
 .last {clear: both;}
 
 .footerinforight {clear: both; margin-top: 200px;}
+
+input#id_website {width: 100px;}
