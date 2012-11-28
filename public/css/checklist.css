@@ -1007,3 +1007,10 @@ span.strike {text-decoration: line-through;}
 form#banner_emails input {margin-left: 10px;float: none; display: inline-block; font-weight: regular; width: 150px; text-align: center; border: 2px solid #a73e3f;}
 
 form#banner_emails button {padding: 15px; padding-left: 5px;border: none; background: none; color: #fff; font-size: 22px;}
+
+/* START - International Page Additions */
+ol.intl{
+	font-size: 20px;
+	line-height: 30px;
+}
+

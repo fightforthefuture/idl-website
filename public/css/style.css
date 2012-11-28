@@ -214,6 +214,13 @@ a:hover{
   margin-left:20px;
   margin-bottom:10px;
 }
+
+.intl li{
+	list-style:decimal;
+	font-size: 20px;
+	line-height: 30px;
+	list-style-position: inside;
+}
 .askleft .email, .askleft .website{
   font-size:12px;
   border:1px solid #ccc;
