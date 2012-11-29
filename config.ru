@@ -1,3 +1,5 @@
+require 'rack-rewrite'
+
 use Rack::Static , :urls => { 
     "/" => "index.html", 
     "/details/1.html" => "details/1.html", 
@@ -27,6 +29,12 @@ use Rack::Static , :urls => {
     "/international/" => "international/index.html", 
     "/international" => "international/index.html", 
     } , :root => "public"
+    
+use Rack::Rewrite do
+r301 %r{/code}, 'https://members.internetdefenseleageu.org'
+# r301 %r{/posts(.*)}, 'http://stickwithjosh.github.com/posts$1'
+end
+
 
 run Rack::URLMap.new({
   "/"      => Rack::Directory.new("public"),
