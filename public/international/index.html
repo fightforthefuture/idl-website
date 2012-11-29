@@ -65,7 +65,46 @@
 				
       	</div>
       	<div id="banner">
-			<p id="banner_txt">Be prepared. Get the IDL started in your country!</p>
+			<p id="banner_txt" style="float: left; width: 250px; margin-left: 100px; text-align: left; font-size: 18px;">Be prepared. Get the IDL started in your country!</p>
+			
+			<style>
+			form#banner_emails input, form div.fauxselect {
+				float: left;
+				margin: 0;
+			}
+			
+			form#banner_emails input {text-align: left; width: 219px;padding: 10px 5px; margin-top: 1px; margin-right: 10px;}
+			form#banner_emails button {float: right;
+			
+				border: 1px solid #579903; /* stroke */
+				-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;
+				border-radius: 10px; /* border radius */
+				-moz-background-clip: padding;
+				-webkit-background-clip: padding-box;
+				background-clip: padding-box; /* prevents bg color from leaking outside the border */
+				-moz-box-shadow: 0 3px 5px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.25), inset 0 0 6px rgba(10,113,169,.11); /* drop shadow, inner shadow and inner glow */
+				-webkit-box-shadow: 0 3px 5px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.25), inset 0 0 6px rgba(10,113,169,.11); /* drop shadow, inner shadow and inner glow */
+				box-shadow: 0 3px 5px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.25), inset 0 0 6px rgba(10,113,169,.11); /* drop shadow, inner shadow and inner glow */
+				background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNlNzAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzdlZGQwNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* gradient overlay */
+				background-image: -moz-linear-gradient(bottom, #3e7000 0%, #7edd04 100%); /* gradient overlay */
+				background-image: -o-linear-gradient(bottom, #3e7000 0%, #7edd04 100%); /* gradient overlay */
+				background-image: -webkit-linear-gradient(bottom, #3e7000 0%, #7edd04 100%); /* gradient overlay */
+				background-image: linear-gradient(bottom, #3e7000 0%, #7edd04 100%); /* gradient overlay */
+			
+				color: #fff; /* text color + color overlay */
+				font-size: 30px;
+				text-shadow: 0 1px 0 #3e4c0e; /* drop shadow */
+				font-weight: normal;
+				padding-left: 20px;
+				width: 100px;
+				height: 44px;
+				padding: 0;
+				text-align: center;
+			
+			}
+			form#banner_emails {margin-left: 20px; overflow: auto; width: 500px;}
+			</style>
 			<form id="banner_emails" action="http://nt.salsalabs.com/save">
 				<input type="hidden" name="email_trigger_KEYS" value="3" />
 				<input type="hidden" name="organization_KEY" value="501"/>
@@ -76,7 +115,7 @@
 				<input type="hidden" name="linkKey" value="8"/>
 				<input type="hidden" name="ip" id="signup_ip" />
 				<input type="hidden" name="user_agent" id="user_agent" />
-				<label>You can still join! </label> <input type="email" name="Email" placeholder="Your email" /> 
+				<input type="email" name="Email" placeholder="Your email" /> 
 				<div class="fauxselect">
 					<select  id="country" name="Country">
 						<option selected="selected">Country</option>
@@ -314,7 +353,11 @@
 						<option value="ZW" data-response="217">Zimbabwe</option>
 					</select>
 				</div>
-				<button class="oleo">Submit</button>
+				
+				<button class="bebas">Submit</button>
+				<div class="organizing" style="float: left; margin-top: 5px;">                    
+					<input type="checkbox" id="organize" name="organizer" value="1" style="width: 30px;"><label for="organize" style="float: left;">I'm interested in organizing IDL actions</label>
+					</div> 
 			</form>
       	</div>
 
