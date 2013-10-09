@@ -29,7 +29,7 @@ use Rack::Static , :urls => {
     } , :root => "public"
     
 use Rack::Rewrite do
-r301 %r{/code}, 'https://members.internetdefenseleague.org'
+r301 %r{^/code}, 'https://members.internetdefenseleague.org'
 # r301 %r{/posts(.*)}, 'http://stickwithjosh.github.com/posts$1'
 end
 
