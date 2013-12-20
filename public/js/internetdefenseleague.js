@@ -3,17 +3,23 @@ $(function() {
         $button = $form.find('#gotime');
 
     $button.on('click', function(e) {
-        e.preventDefault();
+        // IE8 & 9.
+        if (!$.support.cors) {
+            var $input = $('<input type="hidden" name="redirect" />');
+            $input.val('http://internetdefenseleague.org/confirm');
+            return $form.append($input);
+        }
 
-        var data = $form.serialize();
-
+        // Modern browsers.
         $.ajax({
+            data: $form.serialize(),
             success: function(res) {
                 location.href = '/confirm';
             },
-            data: data,
             type: 'post',
             url: $form.attr('action')
         });
+
+        e.preventDefault();
     })
 });
