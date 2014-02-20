@@ -67,6 +67,9 @@ a:hover{
 .headertopwrap .social img{
   height:25px;
 }
+.partlogos a {
+    text-decoration: none;
+}
 
 .moto{
 	width:100%;
