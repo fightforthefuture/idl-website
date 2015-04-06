@@ -32,7 +32,14 @@
     }
     a.button {
         box-shadow: 3px 5px 0px rgba(0, 0, 0, 0.4);
-        background: #77D42A -moz-linear-gradient(center top , #73CD2E 5%, #3D721C 100%) repeat scroll 0% 0%;
+        background: #73cd2e; /* Old browsers */
+        background: -moz-linear-gradient(top, #73cd2e 0%, #3d721c 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#73cd2e), color-stop(100%,#3d721c)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #73cd2e 0%,#3d721c 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #73cd2e 0%,#3d721c 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #73cd2e 0%,#3d721c 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #73cd2e 0%,#3d721c 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73cd2e', endColorstr='#3d721c',GradientType=0 ); /* IE6-9 */
         border-radius: 6px;
         border: 1px solid #5A981B;
         color: #FFF;
@@ -49,7 +56,14 @@
         margin: -15px auto 0px auto;
     }
     a.button:hover {
-        background: #5CB811 -moz-linear-gradient(center top , #5CB811 5%, #77D42A 100%) repeat scroll 0% 0%;
+        background: #5cb811; /* Old browsers */
+        background: -moz-linear-gradient(top, #5cb811 0%, #77d42a 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5cb811), color-stop(100%,#77d42a)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #5cb811 0%,#77d42a 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #5cb811 0%,#77d42a 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #5cb811 0%,#77d42a 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #5cb811 0%,#77d42a 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5cb811', endColorstr='#77d42a',GradientType=0 ); /* IE6-9 */
     }
     #banner_main_idl {
         margin-top: 35px;
