@@ -778,3 +778,68 @@ select#country {
 	font-size: 13px;
 	margin-right: 22px;
 }
+
+section.form input {
+    float: none;
+    display: inline-block;
+    width: 160px;
+}
+section.form input[type="checkbox"] {
+    width: 20px;
+    margin-right: 0px;
+}
+section.form label[for="volunteer"] {
+    font-size: 80%;
+    cursor: pointer;
+}
+section.form label[for="action_comment"] {
+    vertical-align: top;
+}
+section.form .hidden { display: none; }
+
+section.form textarea {
+    width: 477px;
+    height: 25px;
+}
+
+section.form button[type="submit"] {
+    -moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+    box-shadow:inset 0px 1px 0px 0px #caefab;
+    box-shadow: 3px 5px 0px rgba(0,0,0,.4);
+    -webkit-box-shadow: 3px 3px 10px rgba(0,0,0,.4);
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #73cd2e), color-stop(1, #3d721c) );
+    background:-moz-linear-gradient( center top, #73cd2e 5%, #3d721c 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#73cd2e', endColorstr='#3d721c');
+    background-color:#77d42a;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #5a981b;
+    display:inline-block;
+    color:#ffffff;
+    font-size:30px;
+    padding:7px 30px 7px 35px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #333;
+    display: inline-block;
+    margin: 0px;
+/*  width: 200px;*/
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: 'BebasNeueRegular';
+    letter-spacing: .05em;
+    text-shadow: 1px 1px 1px #3f4c0f;
+}
+.disclaimer {
+    position: absolute;
+    left: 50%;
+    top: 370px;
+    margin-left: -140px;
+    font-size: 100%;
+    margin-top: 0px;
+    font-size: 80%;
+    width: 650px;
+    text-align: left;
+    opacity: .8;
+}

@@ -158,9 +158,10 @@
         padding:7px 30px 7px 32px;
         text-decoration:none;
         text-shadow:1px 1px 0px #333;
-        display: block;
+        display: inline-block;
         cursor: pointer;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
+        margin-left: 30px;
         font-family:'BebasNeueRegular';
         letter-spacing: .05em;
         text-shadow: 1px 1px 1px #3f4c0f;
@@ -199,7 +200,7 @@
 
 </head>
 
-<body>
+<body data-components="petitions">
     <div class="socialize" style="position: absolute; height: 350px; margin-left: 10px; margin-top: 10px;">
         <div id="fb-root"></div>
         <script>
@@ -220,7 +221,7 @@
             <br />
             <br />
             <br />
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://internetdefenseleague.org" data-text="If we act together, we can save the net from censorship and broken legislation. Join me in the #InternetDefenseLeague.">Tweet</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://internetdefenseleague.org" data-text="If we act together we can save the net from censorship and broken legislation. Join me in the #InternetDefenseLeague">Tweet</a>
             <script>
             ! function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
@@ -249,283 +250,52 @@
 
                 <div style="float: left; width: 600px; margin-top: 0px; margin-left: 335px; white-space: nowrap;">
 
-                    <form class="action_form" name="act" method="POST" action="https://action.fightforthefuture.org/api/movements/1/salsa" accept-charset="utf-8">
-                        <input type="hidden" value="IDL" name="tag" />
-                        <input type="hidden" value="en" name="member[language]" />
-                        <input type="hidden" value="true" name="salsa" />
-                        <input type="hidden" value="en" name="language_id" />
-                        <input type="hidden" value="1" name="member[movement_id]" />
-                        <input id="#user_agent" type="hidden" value="" name="member[user_agent]" />
-                        <input id="#ip_address" type="hidden" value="" name="member[ip_address]" />
-                        <input type="text" style="display: none;" placeholder="Please leave this field blank" name="guard" />
-                        <input type="hidden" value="1" name="action" />
+                    <section class="form">
+                      <form method="post" action="https://actionnetwork.org/petitions/internet-defense-league-signup" accept-charset="UTF-8" id="petition-form" data-host="https://info.fightforthefuture.org" data-petition-id="22ea57fb-1ae0-4de4-a992-bd9cefc94922">
+                        <main>
+                          <section class="wrap">
+                            <input type="text" name="member[first_name]" placeholder="Full Name*" title="Full Name (Required)" autocomplete="name" required id="form-first_name">
+                            <input type="email" name="member[email]" placeholder="Email*" title="Email (Required)" required id="form-email">
+                            <input type="text" name="member[postcode]" placeholder="Postcode" title="Postcode" required id="form-zip_code">
+                          </section>
+                          <section>
+                            <input type="checkbox" name="volunteer" id="volunteer">
+                            <label for="volunteer">I have a large online audience, or a friend or employer who does.</label>
+                          </section>
+                          <section class="comment hidden">
+                            <label for="action_comment">Explain:</label>
+                            <textarea name="action_comment" id="form-comments"></textarea>
+                          </section>
+                        </main>
 
+                        <footer>
+                          <button type="submit">Join the League</button>
+                          <button id="gotwitter" type="button" onclick="twitterModal()">
+                            <span>Join with Twitter</span>
+                          </button>
+                        </footer>
 
+                        <!-- This field gets updated after geocoding IP address -->
+                        <input type="hidden" name="member[country]" value="US"/>
 
+                        <!-- Mothership Honeypot Bot Defense -->
+                        <input class="hidden" type="checkbox" checked="checked" name="hp_enabled" />
+                        <input class="hidden" type="checkbox" name="hp_disabled" />
+                        <input class="hidden" type="text" name="guard" />
 
-                        <div style="margin:0;padding:0;display:inline">
+                        <!-- Mothership -->
+                        <input type="hidden" name="contact_congress" value="0"/>
+                        <input type="hidden" name="org" value="fftf"/>
 
-                            <input id="id_website" type="text" name="website" placeholder="Your Website" onfocus="if(this.value=='Your Website')this.value=''" onblur="if(this.value=='')this.value='Your Website'" value="Your Website" style="width:175px; height: 29px; margin-top: 11px; float: left; " />
+                        <!-- Action Network -->
+                        <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
+                        <input type="hidden" name="an_petition_id" value="bb4f8407-26fa-43f4-b643-594e9aca5ed3"/>
+                      </form>
+                    </section>
+                    <div class="disclaimer">
+                        <span class="org fftf"><a href="https://www.fightforthefuture.org/" target="_blank">Fight for the Future</a></span> will email you everything you need to participate and updates about related work. <a href="https://www.fightforthefuture.org/privacy/" target="_blank">Privacy</a>.
+                    </div>
 
-                            <input id="id_email" type="text" name="member[email]" placeholder="Your Email" onfocus="if(this.value=='Your Email')this.value=''" onblur="if(this.value=='')this.value='Your Email'" value="Your Email" style="width:195px; height: 29px; margin-top: 11px; float: left; margin-left: 10px;" />
-                            <div class="fauxselect">
-                                <select id="country" name="member[country_iso]">
-                                    <option selected="selected">Country</option>
-                                    <option value=""></option>
-                                    <option value="AF" data-response="22">Afghanistan</option>
-                                    <option value="AL" data-response="23">Albania</option>
-                                    <option value="DZ" data-response="25">Algeria</option>
-                                    <option value="AS">American Samoa</option>
-                                    <option value="AD" data-response="26">Andorra</option>
-                                    <option value="AO" data-response="27">Angola</option>
-                                    <option value="AI">Anguilla</option>
-                                    <option value="AG" data-response="28">Antigua and Barbuda</option>
-                                    <option value="AR" data-response="29">Argentina</option>
-                                    <option value="AM" data-response="30">Armenia</option>
-                                    <option value="AW">Aruba</option>
-                                    <option value="AU" data-response="31">Australia</option>
-                                    <option value="AT" data-response="32">Austria</option>
-                                    <option value="AZ" data-response="33">Azerbaijan</option>
-                                    <option value="BS" data-response="34">Bahamas</option>
-                                    <option value="BH" data-response="35">Bahrain</option>
-                                    <option value="BD" data-response="36">Bangladesh</option>
-                                    <option value="BB" data-response="37">Barbados</option>
-                                    <option value="BY" data-response="38">Belarus</option>
-                                    <option value="BE" data-response="39">Belgium</option>
-                                    <option value="BZ" data-response="40">Belize</option>
-                                    <option value="BJ" data-response="41">Benin</option>
-                                    <option value="BM">Bermuda</option>
-                                    <option value="BT" data-response="42">Bhutan</option>
-                                    <option value="BO" data-response="43">Bolivia</option>
-                                    <option value="BA" data-response="44">Bosnia and Herzegovina</option>
-                                    <option value="BW" data-response="45">Botswana</option>
-                                    <option value="BR" data-response="46">Brazil</option>
-                                    <option value="VG">British Virgin Islands</option>
-                                    <option value="IO">British Indian Ocean Territory</option>
-                                    <option value="BN" data-response="47">Brunei</option>
-                                    <option value="BG" data-response="48">Bulgaria</option>
-                                    <option value="BF" data-response="49">Burkina Faso</option>
-                                    <option value="BI" data-response="50">Burundi</option>
-                                    <option value="KH" data-response="51">Cambodia</option>
-                                    <option value="CM" data-response="52">Cameroon</option>
-                                    <option value="CA" data-response="53">Canada</option>
-                                    <option value="CV" data-response="54">Cape Verde</option>
-                                    <option value="KY">Cayman Islands</option>
-                                    <option value="CF" data-response="55">Central African Republic</option>
-                                    <option value="TD" data-response="56">Chad</option>
-                                    <option value="CL" data-response="57">Chile</option>
-                                    <option value="CN" data-response="58">China</option>
-                                    <option value="CX">Christmas Island</option>
-                                    <option value="CO" data-response="59">Colombia</option>
-                                    <option value="KM" data-response="60">Comoros Islands</option>
-                                    <option value="CD" data-response="61">Congo, Democratic Republic of the</option>
-                                    <option value="CG" data-response="61">Congo, Republic of the</option>
-                                    <option value="CK">Cook Islands</option>
-                                    <option value="CR" data-response="62">Costa Rica</option>
-                                    <option value="CI" data-response="63">Cote D'ivoire</option>
-                                    <option value="HR" data-response="64">Croatia</option>
-                                    <option value="CU" data-response="65">Cuba</option>
-                                    <option value="CY" data-response="66">Cyprus</option>
-                                    <option value="CZ" data-response="67">Czech Republic</option>
-                                    <option value="DK" data-response="70">Denmark</option>
-                                    <option value="DJ" data-response="71">Djibouti</option>
-                                    <option value="DM" data-response="72">Dominica</option>
-                                    <option value="DO" data-response="73">Dominican Republic</option>
-                                    <option value="TP">East Timor</option>
-                                    <option value="EC" data-response="74">Ecuador</option>
-                                    <option value="EG" data-response="75">Egypt</option>
-                                    <option value="SV" data-response="76">El Salvador</option>
-                                    <option value="GQ" data-response="77">Equatorial Guinea</option>
-                                    <option value="ER" data-response="78">Eritrea</option>
-                                    <option value="EE" data-response="79">Estonia</option>
-                                    <option value="ET" data-response="80">Ethiopia</option>
-                                    <option value="FK">Falkland Islands (Malvinas)</option>
-                                    <option value="FO">Faroe Islands</option>
-                                    <option value="FJ" data-response="81">Fiji</option>
-                                    <option value="FI" data-response="82">Finland</option>
-                                    <option value="FR" data-response="83">France</option>
-                                    <option value="GF">French Guiana</option>
-                                    <option value="PF">French Polynesia</option>
-                                    <option value="TF">French Southern Territories</option>
-                                    <option value="GA" data-response="84">Gabon</option>
-                                    <option value="GM" data-response="85">Gambia</option>
-                                    <option value="GE" data-response="86">Georgia</option>
-                                    <option value="DE" data-response="87">Germany</option>
-                                    <option value="GH" data-response="88">Ghana</option>
-                                    <option value="GI">Gibraltar</option>
-                                    <option value="GR" data-response="89">Greece</option>
-                                    <option value="GL">Greenland</option>
-                                    <option value="GD" data-response="90">Grenada</option>
-                                    <option value="GP">Guadeloupe</option>
-                                    <option value="GU">Guam</option>
-                                    <option value="GT" data-response="91">Guatemala</option>
-                                    <option value="GN" data-response="92">Guinea</option>
-                                    <option value="GW" data-response="93">Guinea-Bissau</option>
-                                    <option value="GY" data-response="94">Guyana</option>
-                                    <option value="HT" data-response="95">Haiti</option>
-                                    <option value="VA">Holy See (Vatican City State)</option>
-                                    <option value="HN" data-response="96">Honduras</option>
-                                    <option value="HK">Hong Kong</option>
-                                    <option value="HU" data-response="97">Hungary</option>
-                                    <option value="IS" data-response="98">Iceland</option>
-                                    <option value="IN" data-response="99">India</option>
-                                    <option value="ID" data-response="100">Indonesia</option>
-                                    <option value="IR" data-response="101">Iran</option>
-                                    <option value="IQ" data-response="102">Iraq</option>
-                                    <option value="IE" data-response="103">Ireland</option>
-                                    <option value="IL" data-response="104">Israel</option>
-                                    <option value="IT" data-response="105">Italy</option>
-                                    <option value="JM" data-response="106">Jamaica</option>
-                                    <option value="JP" data-response="107">Japan</option>
-                                    <option value="JO" data-response="109">Jordan</option>
-                                    <option value="KZ" data-response="110">Kazakhstan</option>
-                                    <option value="KE" data-response="111">Kenya</option>
-                                    <option value="KI" data-response="112">Kiribati</option>
-                                    <option value="KR" data-response="113">South Korea</option>
-                                    <option value="XK">Kosovo</option>
-                                    <option value="KW" data-response="114">Kuwait</option>
-                                    <option value="KG" data-response="115">Kyrgyzstan</option>
-                                    <option value="LA" data-response="116">Laos</option>
-                                    <option value="LV" data-response="117">Latvia</option>
-                                    <option value="LB" data-response="118">Lebanon</option>
-                                    <option value="LS" data-response="119">Lesotho</option>
-                                    <option value="LR" data-response="122">Liberia</option>
-                                    <option value="LI" data-response="124">Liechtenstein</option>
-                                    <option value="LT" data-response="125">Lithuania</option>
-                                    <option value="LU" data-response="126">Luxembourg</option>
-                                    <option value="MO">Macau</option>
-                                    <option value="MK">Macedonia</option>
-                                    <option value="MG" data-response="127">Madagascar</option>
-                                    <option value="MW" data-response="128">Malawi</option>
-                                    <option value="MY" data-response="129">Malaysia</option>
-                                    <option value="MV" data-response="130">Maldives</option>
-                                    <option value="ML" data-response="131">Mali</option>
-                                    <option value="MT">Malta</option>
-                                    <option value="MH" data-response="133">Marshall Islands</option>
-                                    <option value="MQ">Martinique</option>
-                                    <option value="MR" data-response="134">Mauritania</option>
-                                    <option value="MU" data-response="135">Mauritius</option>
-                                    <option value="YT">Mayotte</option>
-                                    <option value="MX" data-response="136">Mexico</option>
-                                    <option value="FM" data-response="137">Micronesia</option>
-                                    <option value="MD" data-response="138">Moldova, Republic of</option>
-                                    <option value="MC" data-response="139">Monaco</option>
-                                    <option value="MN" data-response="140">Mongolia</option>
-                                    <option value="ME" data-response="141">Montenegro</option>
-                                    <option value="MS">Montserrat</option>
-                                    <option value="MA" data-response="142">Morocco</option>
-                                    <option value="MZ" data-response="143">Mozambique</option>
-                                    <option value="MM" data-response="144">Myanmar</option>
-                                    <option value="NA" data-response="145">Namibia</option>
-                                    <option value="NR" data-response="146">Nauru</option>
-                                    <option value="NP" data-response="147">Nepal</option>
-                                    <option value="NL" data-response="148">Netherlands</option>
-                                    <option value="AN">Netherlands Antilles</option>
-                                    <option value="NC">New Caledonia</option>
-                                    <option value="NZ" data-response="149">New Zealand</option>
-                                    <option value="NI" data-response="150">Nicaragua</option>
-                                    <option value="NE" data-response="151">Niger</option>
-                                    <option value="NG" data-response="152">Nigeria</option>
-                                    <option value="NU">Niue</option>
-                                    <option value="NF">Norfolk Island</option>
-                                    <option value="MP">Northern Mariana Islands</option>
-                                    <option value="NO" data-response="153">Norway</option>
-                                    <option value="OM" data-response="154">Oman</option>
-                                    <option value="PK" data-response="155">Pakistan</option>
-                                    <option value="PW">Palau</option>
-                                    <option value="PA" data-response="156">Panama</option>
-                                    <option value="PG" data-response="157">Papua New Guinea</option>
-                                    <option value="PY" data-response="158">Paraguay</option>
-                                    <option value="PE" data-response="159">Peru</option>
-                                    <option value="PH" data-response="160">Philippines</option>
-                                    <option value="PN">Pitcairn Island</option>
-                                    <option value="PL" data-response="161">Poland</option>
-                                    <option value="PT" data-response="162">Portugal</option>
-                                    <option value="PR" data-response="209">Puerto Rico</option>
-                                    <option value="QA" data-response="163">Qatar</option>
-                                    <option value="RE">Reunion</option>
-                                    <option value="RO" data-response="164">Romania</option>
-                                    <option value="RU" data-response="165">Russian Federation</option>
-                                    <option value="RW" data-response="16">Rwanda</option>
-                                    <option value="KN" data-response="167">Saint Kitts and Nevis</option>
-                                    <option value="LC" data-response="168">Saint Lucia</option>
-                                    <option value="VC" data-response="169">Saint Vincent and the Grenadines</option>
-                                    <option value="WS" data-response="170">Samoa</option>
-                                    <option value="SM" data-response="171">San Marino</option>
-                                    <option value="ST" data-response="172">Sao Tome and Principe</option>
-                                    <option value="SA" data-response="173">Saudi Arabia</option>
-                                    <option value="SN" data-response="174">Senegal</option>
-                                    <option value="RS" data-response="175">Serbia</option>
-                                    <option value="SC" data-response="176">Seychelles</option>
-                                    <option value="SL" data-response="177">Sierra Leone</option>
-                                    <option value="SG" data-response="178">Singapore</option>
-                                    <option value="SK" data-response="179">Slovakia</option>
-                                    <option value="SI" data-response="180">Slovenia</option>
-                                    <option value="SB" data-response="181">Solomon Islands</option>
-                                    <option value="SO" data-response="182">Somalia</option>
-                                    <option value="ZA" data-response="183">South Africa</option>
-                                    <option value="ES" data-response="185">Spain</option>
-                                    <option value="LK" data-response="186">Sri Lanka</option>
-                                    <option value="SH">St. Helena</option>
-                                    <option value="PM">St. Pierre and Miquelon</option>
-                                    <option value="SD" data-response="187">Sudan</option>
-                                    <option value="SR" data-response="188">Suriname</option>
-                                    <option value="SZ" data-response="189">Swaziland</option>
-                                    <option value="SE" data-response="190">Sweden</option>
-                                    <option value="CH" data-response="191">Switzerland</option>
-                                    <option value="SY" data-response="192">Syria</option>
-                                    <option value="TW">Taiwan</option>
-                                    <option value="TJ" data-response="193">Tajikistan</option>
-                                    <option value="TZ" data-response="194">Tanzania</option>
-                                    <option value="TH" data-response="195">Thailand</option>
-                                    <option value="TG">Togo</option>
-                                    <option value="TK">Tokelau</option>
-                                    <option value="TO" data-response="199">Tonga</option>
-                                    <option value="TT" data-response="200">Trinidad and Tobago</option>
-                                    <option value="TN" data-response="201">Tunisia</option>
-                                    <option value="TR" data-response="202">Turkey</option>
-                                    <option value="TM" data-response="203">Turkmenistan</option>
-                                    <option value="TC">Turks and Caicos Islands</option>
-                                    <option value="TV" data-response="204">Tuvalu</option>
-                                    <option value="UG" data-response="205">Uganda</option>
-                                    <option value="UA" data-response="206">Ukraine</option>
-                                    <option value="AE" data-response="207">United Arab Emirates</option>
-                                    <option value="GB" data-response="208">United Kingdom</option>
-                                    <option value="US" data-response="209">United States</option>
-                                    <option value="UY" data-response="210">Uruguay</option>
-                                    <option value="UZ" data-response="211">Uzbekistan</option>
-                                    <option value="VU" data-response="212">Vanuatu</option>
-                                    <option value="VE" data-response="213">Venezuela</option>
-                                    <option value="VN" data-response="214">Viet Nam</option>
-                                    <option value="VI">Virgin Islands (U.S.)</option>
-                                    <option value="WF">Wallis and Futuna Islands</option>
-                                    <option value="EH">Western Sahara</option>
-                                    <option value="YE" data-response="215">Yemen</option>
-                                    <option value="ZM" data-response="216">Zambia</option>
-                                    <option value="ZW" data-response="217">Zimbabwe</option>
-                                </select>
-                            </div>
-                            <div class="organizing">
-
-                                <label for="organize">
-                                    <input type="checkbox" id="organize" name="organizer" value="1">I'm interested in organizing IDL actions</label>
-                            </div>
-                            <div style="clear: both; font-size: 9pt; float: left;">
-                                Can be anything! Blog, Tumblr, YouTube
-                                <br>channel, Twitter stream, etc.
-
-
-                            </div>
-                            <button id="gotime" style="float: right; clear: auto; margin-right: 20px;" type="submit">
-                                <span>Join The League</span>
-                            </button>
-                            <button id="gotwitter" style="float: right; clear: both; margin-right: 20px;" rel="tmodal" href="tmodal" type="submit">
-                                <span>Join with Twitter</span>
-                            </button>
-                        </div>
-                    </form>
-                    <p style="display: none;" style="font-size: 11px; float: right; margin-right: 30px; margin-top: 50px; color: rgba(255,255,255,.5); clear: both;"><a href="http://fightforthefuture.org/privacy/">Privacy Policy</a>
-                    </p>
                     <!-- <div class="signup">
             OR SIGN UP WITH
 
@@ -540,7 +310,7 @@
             </div>
         </div>
         <div id="banner_main_idl">
-            <p id="banner_txt_main" style="margin-left: 16px; text-align: center;">Help stop government censorship forever! <a href="https://members.internetdefenseleague.org">Get the code</a> or <a href="/censorship">learn more</a>.
+            <p id="banner_txt_main" style="margin-left: 16px; text-align: center;">Help save Net Neutrality once and for all! <a href="https://members.internetdefenseleague.org">Get the code</a> or <a href="https://www.battleforthenet.com/july12" target="_blank">learn more</a>.
             </p>
         </div>
 
@@ -548,7 +318,7 @@
             <div class="step-container">
                 <!-- <div id="number"></div> -->
                 <h2 style="margin-top: 60px;">The League is <a href="/launched">launched</a>!</h2>
-                <p class="step-text">From now on, we're ready to defend against the forces that brought on SOPA. When there's a threat or opportunity, our members will broadcast actions all over the internet. Help us do it.
+                <p class="step-text">From now on, we're ready to defend against the forces that brought on SOPA and threaten Net Neutrality. When there's a threat or opportunity, our members will broadcast actions all over the web. Help us do it.
                     <br>
                     <br><a class="sign_btn" href="#intro">Sign up</a> and <a class="sign_btn" href="http://members.internetdefenseleague.org/">get the code</a> for your website</p>
             </div>
@@ -747,7 +517,7 @@
             <div class="step-container">
                 <h2 style="margin-top: 60px;">How it works</h2>
 
-                <p class="step-text">First, sign up.&nbsp; If you have a website, we'll send you sample alert code to get working in advance.&nbsp; The next time there's an emergency, we'll tell you and send new code.&nbsp; Then it's your decision to pull the trigger.</p>
+                <p class="step-text">First, sign up.&nbsp; If you have a website, we'll send you sample alert code to get working in advance.&nbsp; The next time there's an emergency, we'll tell you and send new code.&nbsp; Then it's your decision to pull the trigger.<br/><br/><a class="sign_btn" href="http://members.internetdefenseleague.org/">Get the code!</a></p>
             </div>
 
             <div class="step-icon">
@@ -790,7 +560,7 @@
                     <span style="margin: 0 auto; width: 288px; overflow: auto; display: block; margin-top: 20px;">
                         <span style="float: left; margin-top: 13px; margin-right: 5px;">$</span>
                         <input id="donation_amount" style="text-align: center; float: left;width: 50px; height: 53px; display: inline-block;" placeholder="25" />
-                        <a href="https://donate.internetdefenseleague.org" class="donate_gotime" style="float: left;margin: 0; display: inline-block;">
+                        <a href="https://donate.fightforthefuture.org" class="donate_gotime" style="float: left;margin: 0; display: inline-block;">
                             <span>DONATE</span>
                         </a>
 
@@ -798,7 +568,7 @@
                         $("a.donate_gotime").click(function(event) {
                             event.preventDefault();
                             var amount_value = $("input#donation_amount").val();
-                            window.location = "https://donate.internetdefenseleague.org?amount=" + amount_value;
+                            window.location = "https://donate.fightforthefuture.org?amount=" + amount_value;
                         });
 
                         $("#donation_amount").keyup(function(event) {
@@ -891,122 +661,13 @@
     </div>
     </div>
 
-    <div id="mask"></div>
-    <div id="twitter_modal">
-        <h2>Join with Twitter</h2>
-        <div class="well">
-            <p style="margin-left: 0px; padding: 20px; font-family: 'Verdana', sans-serif;">We're building a network of Twitter users to re-broadcast urgent alerts. Will you let the IDL post to your Twitter?</p>
-        </div>
 
-        <form action="http://radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST" id="tweez">
-            <label for="email">Your email
-                <span>(Optional)</span>
-            </label>
-            <input type="text" name="email" id="emaildudez" style="border: 1px solid black;">
-            <fieldset>
-                <label style="float: left; clear: left; margin-top: 10px; padding-right: 10px;">Max</label>
-                <select name="frequency">
-                    <option value="1" selected>Tweet once a day</option>
-                    <option value="2">Tweet once a week</option>
-                    <option value="3">Tweet once a month</option>
-                    <option value="4">Tweet three times a year</option>
-                </select>
-            </fieldset>
-            <button id="submitbutton" type="submit" class="twitter blau" style="float:left;">Authorize with Twitter</button>
-        </form>
-    </div>
 
-    <script>
-    function getip(json) {
-        $('#signup_ip').val(json.ip);
-    }
 
-    $("#user_agent").val(navigator.userAgent);
-    </script>
-
-    <script type="application/javascript" src="//fftf-ips.heroku.com/?callback=getip"></script>
-    <script>
-    $(function() {
-        $('#submitbutton').click(function(e) { // when clicked runs this code
-            e.preventDefault();
-            if ($("#emaildudez").val()) {
-                $.ajax({
-                    url: "http://nt.salsalabs.com/save",
-                    type: "POST",
-                    data: {
-                        Email: $('#emaildudez').val(),
-                        email_trigger_KEYS: "3",
-                        organization_KEY: "-501",
-                        redirect: "http://internetdefenseleague.org/confirm",
-                        object: "supporter",
-                        link: "groups",
-                        linkKey: "8",
-                        ip: $('#signup_ip').val(),
-                        user_agent: navigator.userAgent,
-                        Receive_Email: "10",
-                    },
-                    success: true,
-                });
-                window.setTimeout(
-                    function() {
-                        $('form#tweez').submit()
-                    },
-                    500
-                );
-            } else {
-                $('form#tweez').submit();
-            }
-        });
-    });
-
-    $(function() {
-        if (document.location.href.indexOf('#twitter') > -1) {
-            showModalPLZ();
-        }
-    });
-    var showModalPLZ = function() {
-        $('#mask').css({
-            'height': $(document).height(),
-            'width': $(document).width()
-        });
-        $('#twitter_modal, #mask').show();
-        $('#banner_main_idl').hide();
-    }
-
-    $(document).ready(function() {
-        $('button[rel=tmodal]').click(function(e) {
-            e.preventDefault();
-            showModalPLZ();
-
-        });
-        $('#mask').on('click', function() {
-            $('#mask').fadeOut(200);
-            $('#twitter_modal').fadeOut(200);
-            $('#banner_main_idl').fadeIn(200);
-        });
-        // $.ajax({
-        //     url: 'http://127.0.0.1:8000/reach/',
-        //     success: function(data, textStatus, jqXHR) {
-        //         $('#intro').addClass('metered')
-        //         $(data).appendTo('#intro');
-        //     }
-        // });
-    });
-    </script>
-
+    <script type="text/javascript" src="/js/petitions.js"></script>
     <script type="text/javascript" src="/js/internetdefenseleague.js"></script>
 
-    <script type="text/javascript">
-    window._idl = {};
-    _idl.variant = "modal";
-    (function() {
-        var idl = document.createElement('script');
-        idl.type = 'text/javascript';
-        idl.async = true;
-        idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
-        document.getElementsByTagName('body')[0].appendChild(idl);
-    })();
-    </script>
+
 
     <script type="text/javascript">
     var _gaq = _gaq || [];
