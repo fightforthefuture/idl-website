@@ -17,6 +17,7 @@
 
     <link rel="icon" type="image/png" href="idl.png">
 
+    <link rel="stylesheet" href="css/twitter_modal.css" />
     <link rel="stylesheet" href="css/semantic.min.css" />
     <link rel="stylesheet/less" type="text/css" href="less/style.less" />
     <script src="js/less-1.6.2.min.js" type="text/javascript"></script>
@@ -44,6 +45,10 @@
                 <input type="text" name="member[postcode]" placeholder="Postcode" title="Postcode" required id="form-zip_code">
 
                 <input type="submit" value="Join the League" class="join">       
+                <a href="#" id="gotwitter" class="twitter" onclick="twitterModal()">Join with Twitter</a>
+                <div class="disclaimer">
+                    <span class="org fftf"><a href="https://www.fightforthefuture.org/" target="_blank">Fight for the Future</a></span> will email you everything you need to participate and updates about related work. <a href="https://www.fightforthefuture.org/privacy/" target="_blank">Privacy</a>.
+                </div>
 
                 <!-- This field gets updated after geocoding IP address -->
                 <input type="hidden" name="member[country]" value="US"/>
@@ -61,15 +66,6 @@
                 <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
                 <input type="hidden" name="an_petition_id" value="bb4f8407-26fa-43f4-b643-594e9aca5ed3"/>
               </form>
-              <form action="https://radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST">
-                <input type="hidden" name="frequency" value="1" />
-                <button class="twitter" type="submit">
-                  <span>Join with Twitter</span>
-                </button>
-              </form>
-              <div class="disclaimer">
-                  <span class="org fftf"><a href="https://www.fightforthefuture.org/" target="_blank">Fight for the Future</a></span> will email you everything you need to participate and updates about related work. <a href="https://www.fightforthefuture.org/privacy/" target="_blank">Privacy</a>.
-              </div>
             </section>
           </div>
         </div>

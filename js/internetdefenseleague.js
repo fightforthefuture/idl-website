@@ -1,3 +1,10 @@
+function twitterModal() {
+    var url = 'https://mothership-js.fightforthefuture.org/connect/twitter?tag=idl';
+    var properties = 'width=600,height=500,toolbar=no,status=no,menubar=no';
+
+    window.open(url, 'idl_connect', properties);
+}
+
 (function (doc, win) {
     "use strict";
 
@@ -34,3 +41,32 @@
     }
 
 })(document, window);
+
+/*
+$(function() {
+    var $form = $('form.action_form'),
+        $button = $form.find('#gotime');
+
+    $button.on('click', function(e) {
+        // IE8 & 9.
+        if (!$.support.cors) {
+            var $input = $('<input type="hidden" name="redirect" />');
+            $input.val('http://internetdefenseleague.org/confirm');
+            return $form.append($input);
+        }
+
+        // Modern browsers.
+        $.ajax({
+            data: $form.serialize(),
+            success: function(res) {
+                location.href = '/confirm';
+            },
+            type: 'post',
+            url: $form.attr('action')
+        });
+
+        e.preventDefault();
+    })
+});
+
+*/
