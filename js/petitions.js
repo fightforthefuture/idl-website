@@ -67,7 +67,7 @@ window.components.petitions = function (doc, win) {
       alert('An error occurred while signing up :(');
     });
     signatureSubmission.addEventListener('load', function() {
-      window.location.href = '/confirm';
+      window.location.href = '/thanks';
       // alert('yay');
     });
     signatureSubmission.send(compilePayload());
