@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="icon" type="image/png" href="idl.png">
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>The Internet Defense League - Protecting the Free Internet since 2012.</title>
-    <link href="/css/style.css?1" rel="stylesheet" type="text/css">
-    <link href="/css/checklist.css?1" rel="stylesheet" type="text/css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
-
-
-
+    <!-- Facebook -->
     <meta property="og:title" content="Join the Internet Defense League and help me defend the web from censorship and bad legislation" />
     <meta property="og:description" content="The Internet Defense League is a group of sites simultaneously sound the alarm when powerful interests try to take control of the internet. Think the SOPA blackout, but larger and even more unstoppable. We have big plans that you can be a part of. Register your site now!" />
     <meta property="og:image" content="http://internetdefenseleague.org/images/fb_share.png" />
@@ -21,640 +15,236 @@
     <meta property="og:type" content="article" />
     <meta property="fb:admins" content="678090273" />
 
-    <style>
-    /* modal stuff */
-    #twitter_modal {
-        font-family:'Montserrat', sans-serif;
-        width: 580px;
-        height: 400px;
-        border-radius: 30px;
-        position:absolute;
-        display:none;
-        background-color: white;
-        left: 50%;
-        top: 50%;
-        margin-left: -290px;
-        margin-top: -200px;
-    }
-    #mask {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        display: none;
-        opacity: .7;
-        filter: alpha(opacity=70);
-    }
-    #twitter_modal h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-    #twitter_modal input, #twitter_modal select {
-        display: block;
-    }
-    #twitter_modal input[type="text"] {
-        padding: 13px;
-        font-size: 16px;
-        border: 1px solid black;
-        width: 280px;
-        border: none;
-        -moz-box-shadow: inset 0 0 5px #888;
-        -webkit-box-shadow: inset 0 0 10px#888;
-        box-shadow: inner 0 0 10px #888;
-    }
-    #twitter_modal p, #twitter_modal select, #twitter_modal input {
-        margin-left: 25px;
-        margin-top: 5px;
-        margin-bottom: 15px;
-    }
-    #twitter_modal label {
-        margin-left: 25px;
-        display: block;
-        text-align: left;
-    }
-    #twitter_modal button {
-        margin-left: 25px;
-        margin-top: 15px;
-    }
-    #twitter_modal select {
-        width: 235px;
-    }
-    .well {
-        height: 85px;
-        background-color: #eaeaea;
-        -moz-box-shadow: inset 0 0 5px #888;
-        -webkit-box-shadow: inset 0 0 5px#888;
-        box-shadow: inner 0 0 5px #888;
-        margin-bottom: 15px;
-    }
-    .well p {
-        padding: 10px;
-        text-align: center;
-        font-size: 15px;
-        line-height: 1.5;
-    }
-    button.twitter {
-        display: inline-block;
-        outline: none;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        font: 14px/100% Arial, Helvetica, sans-serif;
-        padding: .5em 2em .55em;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-        -webkit-border-radius: .5em;
-        -moz-border-radius: .5em;
-        border-radius: .5em;
-        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-    }
-    button.twitter:hover {
-        text-decoration: none;
-    }
-    button.twitter:active {
-        position: relative;
-        top: 1px;
-    }
-    .blau {
-        color: #fef4e9;
-        border: solid 1px #32c0f2;
-        background: #32c0f2;
-        background: -webkit-gradient(linear, left top, left bottom, from(#32c0f2), to(#0189b9));
-        background: -moz-linear-gradient(top, #32c0f2, #0189b9);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#32c0f2', endColorstr='#0189b9');
-    }
-    .blau:hover {
-        border: 1px solid #12a1d6;
-        background: #12a1d6;
-        background: -webkit-gradient(linear, left top, left bottom, from(#12a1d6), to(#0b6383));
-        background: -moz-linear-gradient(top, #12a1d6, #0b6383);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12a1d6', endColorstr='#0b6383');
-    }
-    .blau:active {
-        color: #fcd3a5;
-        background: -webkit-gradient(linear, left top, left bottom, from(#0b6383), to(#12a1d6));
-        background: -moz-linear-gradient(top, #0b6383, #12a1d6);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0b6383', endColorstr='#12a1d6');
-    }
-    button#gotwitter {
-        -moz-box-shadow:inset 0px 1px 0px 0px #caefab;
-        -webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
-        box-shadow:inset 0px 1px 0px 0px #caefab;
-        box-shadow: 3px 5px 0px rgba(0, 0, 0, .4);
-        -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
-        background:-webkit-gradient(linear, left top, left bottom, from(#32C0F2), to(#0189B9));
-        background:-moz-linear-gradient(center top, #32C0F2, #0189B9);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#32C0F2', endColorstr='#0189B9');
-        background-color:#77d42a;
-        -moz-border-radius:3px;
-        -webkit-border-radius:3px;
-        border-radius:3px;
-        border: solid 1px #32c0f2;
-        color:#ffffff;
-        font-size:20px;
-        padding:7px 30px 7px 32px;
-        text-decoration:none;
-        text-shadow:1px 1px 0px #333;
-        display: inline-block;
-        cursor: pointer;
-        margin-bottom: 0px;
-        margin-left: 30px;
-        font-family:'BebasNeueRegular';
-        letter-spacing: .05em;
-        text-shadow: 1px 1px 1px #3f4c0f;
-        height: 40px;
-        width: 195px;
-    }
-    form button#gotwitter:hover {
-        background: -webkit-gradient(linear, left top, left bottom, from(#12a1d6), to(#0b6383));
-        background: -moz-linear-gradient(top, #12a1d6, #0b6383);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12a1d6', endColorstr='#0b6383');
-        background-color:#5cb811;
-    }
-    button#gotwitter:active {
-        background: -webkit-gradient(linear, left top, left bottom, from(#0b6383), to(#12a1d6));
-        background: -moz-linear-gradient(top, #0b6383, #12a1d6);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0b6383', endColorstr='#12a1d6');
-        top:1px;
-    }
-    form#tweez {
-        float: left;
-        background: url(http://radiant-earth-4575.herokuapp.com/assets/twitter_logo.jpg) no-repeat 350px 0px;
-        width: 580px;
-    }
-    form#tweez button {
-        float: left;
-        clear: left;
-    }
-    fieldset {
-        clear: left;
-        float: left;
-        width: 400px;
-        border: none;
-    }
-    </style>
+    <link rel="icon" type="image/png" href="idl.png">
 
+    <link rel="stylesheet" href="css/semantic.min.css" />
+    <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <script src="js/less-1.6.2.min.js" type="text/javascript"></script>
 
-</head>
-
-<body data-components="petitions">
-    <div class="socialize" style="position: absolute; height: 350px; margin-left: 10px; margin-top: 10px;">
-        <div id="fb-root"></div>
-        <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <script type="text/javascript">
-        var _sf_startpt = (new Date()).getTime()
-        </script>
-        <div id="shareitup" style="overflow: visible">
-            <div class="fb-like" data-href="http://internetdefenseleague.org" data-send="true" data-layout="box_count" data-width="150" data-show-faces="true"></div>
-            <br />
-            <br />
-            <br />
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://internetdefenseleague.org" data-text="If we act together we can save the net from censorship and broken legislation. Join me in the #InternetDefenseLeague">Tweet</a>
-            <script>
-            ! function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");
-            </script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  </head>
+  <body data-components="petitions">
+    <div class="hero">
+      <div class="ui container">
+        <div class="ui grid">
+          <div class="sixteen wide column">
+            <a href="#" id="logo"><img src="images/internetdefenseleague_logo.png" alt=""></a>
+          </div>
         </div>
+        <div class="ui grid stackable">
+          <div class="nine wide column">
+            <h1>Make sure the internet <br>never loses. <span style="color:#fff">Ever.</span></h1>
+            <p>The <a href="http://www.sopastrike.com/" target="_blank">Internet Blackout</a> was just the beginning. On <a href="https://www.battleforthenet.com/july12" target="_blank">July 12th</a>, we need to join together to protect net neutrality. Together, our websites and personal networks can mobilize the planet to defend free speech &amp; free choice online. The <a href="https://www.privateinternetaccess.com/blog/2017/06/private-internet-access-shines-cat-signal-net-neutrality" target="_blank">#CatSignal</a> has been activated. Are you in?</p>
+          </div>
+          <div class="seven wide column">
+            <section class="form">
+              <form method="post" action="https://actionnetwork.org/petitions/internet-defense-league-signup" accept-charset="UTF-8" id="petition-form" data-host="https://info.fightforthefuture.org" data-petition-id="22ea57fb-1ae0-4de4-a992-bd9cefc94922">
+                <input type="text" name="member[first_name]" placeholder="Full Name*" title="Full Name (Required)" autocomplete="name" required id="form-first_name">
+                <input type="email" name="member[email]" placeholder="Email*" title="Email (Required)" required id="form-email">
+                <input type="text" name="member[postcode]" placeholder="Postcode" title="Postcode" required id="form-zip_code">
+
+                <input type="submit" value="Join the League" class="join">       
+
+                <!-- This field gets updated after geocoding IP address -->
+                <input type="hidden" name="member[country]" value="US"/>
+
+                <!-- Mothership Honeypot Bot Defense -->
+                <input class="hidden" type="checkbox" checked="checked" name="hp_enabled" />
+                <input class="hidden" type="checkbox" name="hp_disabled" />
+                <input class="hidden" type="text" name="guard" />
+
+                <!-- Mothership -->
+                <input type="hidden" name="contact_congress" value="0"/>
+                <input type="hidden" name="org" value="fftf"/>
+
+                <!-- Action Network -->
+                <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
+                <input type="hidden" name="an_petition_id" value="bb4f8407-26fa-43f4-b643-594e9aca5ed3"/>
+              </form>
+              <form action="https://radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST">
+                <input type="hidden" name="frequency" value="1" />
+                <button class="twitter" type="submit">
+                  <span>Join with Twitter</span>
+                </button>
+              </form>
+              <div class="disclaimer">
+                  <span class="org fftf"><a href="https://www.fightforthefuture.org/" target="_blank">Fight for the Future</a></span> will email you everything you need to participate and updates about related work. Join with Twitter to let us tweet actions on your behalf. <a href="https://www.fightforthefuture.org/privacy/" target="_blank">Privacy</a>.
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="wrapper">
-        <div id="container">
-            <div class="wrap" id="intro"></div>
-
-            <div class="wrap" id="leadin">
-                <h1>Make sure the internet never loses. Ever.</h1>
-
-                <p style="font-family: 'Montserrat', sans-serif; padding-bottom: 10px; padding-top: 20px; font-size: 12pt; line-height: 17pt; color: #fff; margin-left: 335px;">The <a href="http://sopastrike.com">Internet Blackout</a> was just the beginning. Together, our websites and personal networks can mobilize the planet to defend the internet from bad laws &amp; monopolies. Are you in?</p>
-
-                <div style="float: left; width: 600px; margin-top: 0px; margin-left: 335px; white-space: nowrap;">
-
-                    <section class="form">
-                      <form method="post" action="https://actionnetwork.org/petitions/internet-defense-league-signup" accept-charset="UTF-8" id="petition-form" data-host="https://info.fightforthefuture.org" data-petition-id="22ea57fb-1ae0-4de4-a992-bd9cefc94922">
-                        <main>
-                          <section class="wrap">
-                            <input type="text" name="member[first_name]" placeholder="Full Name*" title="Full Name (Required)" autocomplete="name" required id="form-first_name">
-                            <input type="email" name="member[email]" placeholder="Email*" title="Email (Required)" required id="form-email">
-                            <input type="text" name="member[postcode]" placeholder="Postcode" title="Postcode" required id="form-zip_code">
-                          </section>
-                          <section>
-                            <input type="checkbox" name="volunteer" id="volunteer">
-                            <label for="volunteer">I have a large online audience, or a friend or employer who does.</label>
-                          </section>
-                          <section class="comment hidden">
-                            <label for="action_comment">Explain:</label>
-                            <textarea name="action_comment" id="form-comments"></textarea>
-                          </section>
-                        </main>
-
-                        <button type="submit">Join the League</button>
-
-                        <!-- This field gets updated after geocoding IP address -->
-                        <input type="hidden" name="member[country]" value="US"/>
-
-                        <!-- Mothership Honeypot Bot Defense -->
-                        <input class="hidden" type="checkbox" checked="checked" name="hp_enabled" />
-                        <input class="hidden" type="checkbox" name="hp_disabled" />
-                        <input class="hidden" type="text" name="guard" />
-
-                        <!-- Mothership -->
-                        <input type="hidden" name="contact_congress" value="0"/>
-                        <input type="hidden" name="org" value="fftf"/>
-
-                        <!-- Action Network -->
-                        <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
-                        <input type="hidden" name="an_petition_id" value="bb4f8407-26fa-43f4-b643-594e9aca5ed3"/>
-                      </form>
-                    </section>
-                    <div class="disclaimer">
-                        <span class="org fftf"><a href="https://www.fightforthefuture.org/" target="_blank">Fight for the Future</a></span> will email you everything you need to participate and updates about related work. <a href="https://www.fightforthefuture.org/privacy/" target="_blank">Privacy</a>.
-                    </div>
-
-                    <!-- <div class="signup">
-            OR SIGN UP WITH
-
-            <ul class="social">
-              <li class="fb"><a href=""></a></li>
-
-              <li class="goog"><a href=""></a></li>
-
-              <li class="oid"><a href=""></a></li>
-            </ul> -->
-                </div>
+    <div class="second">
+      <div class="ui container">
+        <div class="ui grid stackable">
+          <div class="sixteen wide column">
+            <h3>special thanks to</h3>
+            <a href="https://www.privateinternetaccess.com/" target="_blank"><img src="images/privateinternetaccess.png" alt=""></a>
+            <p><br>...for the <a href="https://www.privateinternetaccess.com/blog/2017/06/private-internet-access-shines-cat-signal-net-neutrality">amazing ad</a> in the New York Times.</p><br><br>
+          </div>
+          <div class="sixteen wide column">
+            <h2>members of the league</h2>
+          </div>
+          <div class="members">
+            <div class="ui grid stackable">
+              <div class="three wide column"><a href="https://www.mozilla.org/en-US/" target="_blank"><img src="images/member1.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://secure.php.net/" target="_blank"><img src="images/member2.jpg" alt=""></a></div>
+              <div class="four wide column"><a href="https://www.reddit.com/" target="_blank"><img src="images/member3.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="http://imgur.com/" target="_blank"><img src="images/member4.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://wordpress.org/" target="_blank"><img src="images/member5.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://purse.io/" target="_blank"><img src="images/member16.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://www.torproject.org/" target="_blank"><img src="images/member7.jpg" alt=""></a></div>
+              <div class="four wide column"><a href="https://www.expressvpn.com/" target="_blank"><img src="images/member8.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://www.accessnow.org/" target="_blank"><img src="images/member9.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://www.hotspotshield.com/" target="_blank"><img src="images/member10.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://www.newamerica.org/" target="_blank"><img src="images/member11.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://openmedia.org/" target="_blank"><img src="images/member12.jpg" alt=""></a></div>
+              <div class="four wide column"><a href="https://www.freepress.net/" target="_blank"><img src="images/member13.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://demandprogress.org/" target="_blank"><img src="images/member14.jpg" alt=""></a></div>
+              <div class="three wide column"><a href="https://piwik.org/" target="_blank"><img src="images/member15.jpg" alt=""></a></div>
+              <div class="sixteen wide column">
+                <a href="http://www.internetdefenseleague.org/members">View more members</a>
+              </div>
             </div>
+          </div>
         </div>
-        <div id="banner_main_idl">
-            <p id="banner_txt_main" style="margin-left: 16px; text-align: center;">Help save Net Neutrality once and for all! <a href="https://members.internetdefenseleague.org">Get the code</a> or <a href="https://www.battleforthenet.com/july12" target="_blank">learn more</a>.
-            </p>
+      </div>
+    </div>
+
+    <div class="third">
+      <div class="ui container">
+        <div class="ui grid stackable">
+          <div class="eight wide column">
+            <img src="images/the_problem.jpg" alt="">
+            <h3>The Problem</h3>
+            <p>Internet freedom and individual power are changing the course of history. But entrenched institutions and monopolies want this to stop. Elected leaders often don't understand the internet, so they're easily confused or corrupted.</p>
+          </div>
+          <div class="eight wide column">
+            <img src="images/beyond_the_blackout.jpg" alt="">
+            <h3>Beyond the blackout</h3>
+            <p>The Internet Defense League takes the proven tactic that killed SOPA & PIPA and turns it into a permanent force for defending the internet, and making it better. Think of it like the internet's Emergency Broadcast System, or the bat signal! When the <a href="https://www.privateinternetaccess.com/blog/2017/06/private-internet-access-shines-cat-signal-net-neutrality" target="_blank">#CatSignal</a> shines, the internet comes together. Our next move: <a href="https://www.battleforthenet.com/july12" target="_blank">defending net neutrality</a>.</p>
+          </div>        
+          <div class="eight wide column">
+            <img src="images/the_plan.jpg" alt="">
+            <h3>The plan</h3>
+            <p>When the internet's in danger and we need millions of people to act, the League will ask its members to broadcast an action.  (Say, a prominent message asking everyone to call their elected leaders.)  With the combined reach of our websites and social networks, we can be massively more effective than any one organization.</p>
+          </div>        
+          <div class="eight wide column">
+            <img src="images/how_it_works.jpg" alt="">
+            <h3>How it works</h3>
+            <p>First, sign up.  If you have a website, we'll send you sample alert code to get working in advance.  The next time there's an emergency, we'll tell you and send new code.  Then it's your decision to pull the trigger.</p>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="step blue">
-            <div class="step-container">
-                <!-- <div id="number"></div> -->
-                <h2 style="margin-top: 60px;">The League is <a href="/launched">launched</a>!</h2>
-                <p class="step-text">From now on, we're ready to defend against the forces that brought on SOPA and threaten Net Neutrality. When there's a threat or opportunity, our members will broadcast actions all over the web. Help us do it.
-                    <br>
-                    <br><a class="sign_btn" href="#intro">Sign up</a> and <a class="sign_btn" href="http://members.internetdefenseleague.org/">get the code</a> for your website</p>
-            </div>
-            <div class="step-icon">
-                <a href="/launched">
-                    <img src="images/getcode.png">
-                </a>
-            </div>
+    <div class="fourth">
+      <div class="ui container">
+        <div class="sixteen wide column">
+          <h3>Support the network. Become a member</h3>
+          <p>Our organization and network helped to defeat SOPA/PIPA (by making the innovative tools that powered the largest online protest in history).  The Internet Defense League continues this work. But it depends on its members' donations for its tiny staff to keep working behind the scenes.  Your donation makes us stronger AND helps us fight to win.</p>
+          <form id="donate" action="https://donate.fightforthefuture.org" method="GET">
+            <input id="amount" type="text" class="input" value="$24" name="amount" required><br/>
+            <input type="submit" value="Donate" class="donate">
+          </form>
+          <script type="text/javascript">
+            (function() {
+              var donate = document.getElementById('donate');
+
+              donate.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                var amount = document.getElementById('amount');
+                amount.value = amount.value.replace(/^\$/g, '');
+
+                donate.submit();
+              });
+            })();
+          </script>
         </div>
+      </div>
+    </div>
 
+    <div class="fifth">
+      <div class="ui container">
+        <div class="ui grid stackable">
+          <div class="eight wide column">
+            <h4>The League is launched!</h4>
+            <p>From now on, we're ready to defend against the forces that brought on SOPA and threaten Net Neutrality. When there's a threat or opportunity, our members will broadcast actions all over the web. Help us do it.</p>
+            <a href="https://members.internetdefenseleague.org" class="get-code">Get code</a>
+          </div>
+          <div class="eight wide column">
+            <img src="images/browser.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="step peach">
-            <div class="center-text" style=" padding-bottom: 30px;">
-                <h2 style="margin-top: 40px;">Early members of the League
-                    <br>
-                    <span style="font-family: palatino, georgia, serif; color:white; font-size: 14pt; font-style:italic"><a href="http://www.internetdefenseleague.org/members">See full list of members</a>
-                    </span>
-                </h2>
-
-            </div>
-            <ul class="partlogos">
-                <li>
-                    <a href="http://www.mozilla.org" target="blank">
-                        <img class="logolinks" src="/images/logos/mozilla.png" alt="Mozilla">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://fightforthefuture.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/fftf.png" alt="fightforthefuture">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.privateinternetaccess.com/" target="blank">
-                        <img class="logolinks" src="/images/logos/pia.png" alt="Private Internet Access">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://wordpress.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/wordpress.png" alt="Wordpress">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.reddit.com/" target="blank">
-                        <img class="logolinks" src="/images/logos/reddit.png" alt="Reddit">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.cheezburger.com/" target="blank">
-                        <img class="logolinks" src="/images/logos/cheezburger.png" alt="cheezburger">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.eff.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/eff.png" alt="EFF">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.publicknowledge.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/publicknowledge.png" alt="Public Knowledge">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.dontcensorthenet.com/" target="blank">
-                        <img class="logolinks" src="/images/logos/dontcensor.png" alt="Dont Censor the net">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.cdt.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/cdt.png" alt="Center for Democracy & Technology">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.ccianet.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/ccia.png" alt="Computer & Communications Industry Association">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://craigconnects.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/craig.png" alt="Craigconnects">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.accessnow.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/accessnow.png" alt="Access Now">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://oti.newamerica.net/" target="blank">
-                        <img class="logolinks" src="/images/logos/oti.png" alt="Open Technology Institute">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://imgur.com/" target="blank">
-                        <img class="logolinks" src="/images/logos/imgur.png" alt="Imgur">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.fark.com/" target="blank">
-                        <img class="logolinks" src="/images/logos/fark.png" alt="FARK">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.laquadrature.net/" target="blank">
-                        <img class="logolinks" src="/images/logos/quad.png" alt="laquadrature">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://demandprogress.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/demand_progress.png" alt="Demand Progress">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://openmedia.ca" target="blank">
-                        <img class="logolinks" src="/images/logos/openmedia.png" alt="OpenMedia.ca">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.freepress.net/" target="blank">
-                        <img class="logolinks" src="/images/logos/freepress.png" alt="Free Press">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.php.net/" target="blank">
-                        <img class="logolinks" src="/images/logos/php.png" alt="PHP">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="http://www.credomobile.com/" target="blank">
-                        <img class="logolinks" src="/images/logos/credo.png" alt="CREDO Mobile">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.4chan.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/4chan.png" alt="4chan">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.hotspotshield.com/" target="blank">
-                        <img class="logolinks" src="/images/logos/hotspot.png" alt="HotspotShield">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://piwik.org/" target="blank">
-                        <img class="logolinks" src="/images/logos/piwik.png" alt="Piwik">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://over-blog.com" target="blank">
-                        <img class="logolinks" src="/images/logos/overblog.png" alt="OverBlog">
-                    </a>
-                </li>
-                <li><a href="https://www.expressvpn.com" target="blank"><img class="logolinks" src="/images/logos/expressvpn.png" alt="ExpressVPN"></a></li>
-                <li><a href="https://www.mostsecurevpn.com/" target="blank"><img class="logolinks" src="/images/logos/mostsecurevpn.png" alt="Most Secure VPN"></a></li>
+    <footer>
+      <div class="ui container">
+        <div class="ui grid stackable">
+          <div class="five wide column">
+            <h5>What's in the works?</h5>
+            <ul>
+              <li>Optional code that activates automatically according to criteria you specify (e.g. SOPA returns).</li>
+              <li>Analytics to track the total size and reach of the network.</li>
+              <li>A collaborative system for identifying threats and opportunities.</li>
+              <li>You need our branding materials? Get it here</li>
+              <li><a href="https://www.reddit.com/r/internetdefense/">Join the discussion on reddit</a></li>
+              <li><a href="https://groups.google.com/forum/?fromgroups#!forum/internet-defense-league-non-dev">Campaigns and Ideas google group</a></li>
             </ul>
+          </div>
+
+          <div class="five wide column">
+            <h5>Are you a developer?</h5>
+            <p>Join the project to build the flexible JavaScript tools that make the Defense League tick.</p>
+            <a href="https://github.com/fightforthefuture/idl-members" class="with-icon"><i class="ui icon github"></i> Github</a>
+            <a href="https://groups.google.com/forum/?fromgroups#!forum/internetdefenseleague" class="with-icon"><i class="ui icon google"></i> Google Developers Group</a>
+            <a href="https://www.pivotaltracker.com/n/projects/453967" class="with-icon"><i class="ui icon bullseye"></i> Tracker</a>
+            <a href="https://twitter.com/Defense_League" class="with-icon"><i class="ui icon twitter"></i> Twitter</a>
+          </div>
+
+          <div class="six wide column">
+            <h5>Who's behind it?</h5>
+            <p><a href="https://www.fightforthefuture.org/" target="_blank">Fight for the Future</a>, <a href="http://www.thecenterforrights.org/" target="_blank">Center for Rights</a>, the authors of several different SOPA blackout tools, along with a growing group of volunteers. </a>
+  </p>
+            <h5>Get in touch</h5>
+            <p>If you run a big site and want to get in touch or if you want to get more involved, email us at team@fightforthefuture.org. 
+<a href="https://www.internetdefenseleague.org/branding" target="_blank"> Click here</a> for our branding materials.
+
+  </p>
+            <img src="images/footer_image.jpg" alt="">
+          </div>
         </div>
+      </div>
+    </footer>
 
-        <div class="step orange">
-            <div class="step-container">
-                <h2 style="margin-top: 60px;">Beyond the
-                    <br>blackout
-                </h2>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="  crossorigin="anonymous"></script>
 
-                <p class="step-text">The Internet Defense League takes the tactic that killed <a href="http://www.opencongress.org/bill/112-h3261/money">SOPA</a> &amp; <a href="http://www.opencongress.org/bill/112-s968/show">PIPA</a> and turns it into a permanent force for defending the internet, and making it better. Think of it like the internet's Emergency Broadcast System, or its bat signal!</p>
-            </div>
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26978317-6']);
+      _gaq.push(['_trackPageview']);
 
-            <div class="step-icon">
-                <img src="images/emergency.png">
-            </div>
-        </div>
+      (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
 
-        <div class="step blue">
-            <div class="step-container">
-                <h2 style="margin-top: 60px;">The Problem</h2>
-                <p class="step-text">Internet freedom and individual power are changing the course of history. But entrenched institutions and monopolies want this to stop. Elected leaders often don't understand the internet, so they're easily confused or corrupted.</p>
-            </div>
-
-            <div class="step-icon">
-                <img src="images/theproblem.png">
-            </div>
-        </div>
-
-        <div class="step green">
-            <div class="step-container">
-                <h2 style="margin-top: 60px;">The plan</h2>
-
-                <p class="step-text">When the internet's in danger and we need millions of people to act, the League will ask its members to broadcast an action.&nbsp; (Say, a prominent message asking everyone to call their elected leaders.)&nbsp; With the combined reach of our websites and social networks, we can be massively more effective than any one organization.</p>
-            </div>
-
-            <div class="step-icon">
-                <img src="images/map.png">
-            </div>
-        </div>
-
-        <div class="step yellow">
-            <div class="step-container">
-                <h2 style="margin-top: 60px;">How it works</h2>
-
-                <p class="step-text">First, sign up.&nbsp; If you have a website, we'll send you sample alert code to get working in advance.&nbsp; The next time there's an emergency, we'll tell you and send new code.&nbsp; Then it's your decision to pull the trigger.<br/><br/><a class="sign_btn" href="http://members.internetdefenseleague.org/">Get the code!</a></p>
-            </div>
-
-            <div class="step-icon">
-                <img src="images/code.png">
-            </div>
-        </div>
-
-
-        <div class="step teal" id="donation">
-            <div class="center-text" style=" padding-bottom: 30px;">
-                <h2 style="margin-top: 60px;">Support the network. Become a member.</h2>
-
-                <p class="step-text">Our organization and network helped to defeat SOPA/PIPA (by making the innovative tools that powered the largest online protest in history).&nbsp; The Internet Defense League continues this work. But it depends on its&nbsp; members' donations for its tiny staff to keep working behind the scenes.&nbsp; Your donation makes us stronger AND helps us fight to win.
-
-                    <span style="margin: 0 auto; width: 288px; overflow: auto; display: block; margin-top: 20px;">
-                        <span style="float: left; margin-top: 13px; margin-right: 5px;">$</span>
-                        <input id="donation_amount" style="text-align: center; float: left;width: 50px; height: 53px; display: inline-block;" placeholder="25" />
-                        <a href="https://donate.fightforthefuture.org" class="donate_gotime" style="float: left;margin: 0; display: inline-block;">
-                            <span>DONATE</span>
-                        </a>
-
-                        <script>
-                        $("a.donate_gotime").click(function(event) {
-                            event.preventDefault();
-                            var amount_value = $("input#donation_amount").val();
-                            window.location = "https://donate.fightforthefuture.org?amount=" + amount_value;
-                        });
-
-                        $("#donation_amount").keyup(function(event) {
-                            if (event.keyCode == 13) {
-                                $("a.donate_gotime").click();
-                            }
-                        });
-                        </script>
-                    </span>
-                </p>
-
-
-            </div>
-        </div>
-
-        <div class="step gray call-to-action" style="border: 0px solid #000">
-            <div class="column" style="margin-left: 40px; padding-right: 20px;">
-                <h3>What's in the works?</h3>
-
-                <ul class="works">
-                    <li>Optional code that activates automatically according to criteria you specify (e.g. SOPA returns).</li>
-
-                    <li>Analytics to track the total size and reach of the network.</li>
-
-                    <li>A collaborative system for identifying threats and opportunities.</li>
-
-                    <li>You need our branding materials? <a href="http://internetdefenseleague.org/branding">Get it here</a>
-                    </li>
-
-                    <li><a href="http://www.reddit.com/r/internetdefense">join the discussion on reddit</a>
-                    </li>
-
-                    <li><a href="https://groups.google.com/forum/?fromgroups#!forum/internet-defense-league-non-dev">Campaigns and Ideas google group</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <h3>Are you a developer?</h3>
-
-                <p>Join the project to build the flexible JavaScript tools that make the Defense League tick.</p>
-
-                <ul class="footer-nav">
-                    <li>
-                        <a href="https://github.com/fightforthefuture/idl-members" class="dev">
-                            <img src="/images/github.png">
-                            <span>GITHUB</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://groups.google.com/forum/?fromgroups#!forum/internetdefenseleague" class="dev">
-                            <img src="/images/google.png">
-                            <span>DEVELOPERS GOOGLE GROUP</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.pivotaltracker.com/projects/453967" class="dev">
-                            <img src="/images/tracker.png">
-                            <span>TRACKER</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/Defense_League" class="dev">
-                            <img src="/images/twitter.png">
-                            <span>TWITTER</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <h3>Who's behind it?</h3>
-
-                <p><a href="https://fightforthefuture.org">Fight for the Future,</a> &amp <a href="https://fftfef.org/">Fight for the Future Education Fund</a> the authors of several different SOPA blackout tools, and a growing group of volunteers. Be in touch.</p>
-                <a href="http://fightforthefuture.org">
-                    <img src="images/fftf.logo.png" style="margin-top: 20px;">
-                </a>
-                <a href="http://www.thecenterforrights.org">
-                    <img src="images/cr_logo_footer.png" style="margin-top: 2px;">
-                </a>
-
-                <h3 id="touch">Get in touch</h3>
-                <p>If you run a big site and want to get in touch or if you want to get more involved, email us at <a href="mailto:team@fightforthefuture.org?Subject=IDL%20Big%20Site%20Contact">team@fightforthefuture.org.</a> 
-                    <br>for our branding materials <a href="http://internetdefenseleague.org/branding">Click here</a>
-                </p>
-                <p style="display: none;"><a href="http://fightforthefuture.org/privacy/">Privacy Policy</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-
+      $(function(){
+          $('.mobile-toggle').on('click', function(){
+              $('nav ul').slideToggle();
+          });
+      });
+    </script>
 
     <script type="text/javascript" src="/js/petitions.js"></script>
     <script type="text/javascript" src="/js/internetdefenseleague.js"></script>
-
-
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-26978317-6']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-
-    $("input").focus(function() {
-        $(this).addClass('activez');
-    });
-    </script>
-
-</body>
-
+  </body>
 </html>
