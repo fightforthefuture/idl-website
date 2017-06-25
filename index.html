@@ -268,12 +268,7 @@
                           </section>
                         </main>
 
-                        <footer>
-                          <button type="submit">Join the League</button>
-                          <button id="gotwitter" type="button" onclick="twitterModal()">
-                            <span>Join with Twitter</span>
-                          </button>
-                        </footer>
+                        <button type="submit">Join the League</button>
 
                         <!-- This field gets updated after geocoding IP address -->
                         <input type="hidden" name="member[country]" value="US"/>
@@ -290,6 +285,12 @@
                         <!-- Action Network -->
                         <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
                         <input type="hidden" name="an_petition_id" value="bb4f8407-26fa-43f4-b643-594e9aca5ed3"/>
+                      </form>
+                      <form action="https://radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST">
+                        <input type="hidden" name="frequency" value="1" />
+                        <button id="gotwitter" type="submit">
+                          <span>Join with Twitter</span>
+                        </button>
                       </form>
                     </section>
                     <div class="disclaimer">
