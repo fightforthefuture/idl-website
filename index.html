@@ -61,9 +61,16 @@
                 <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
                 <input type="hidden" name="an_petition_id" value="bb4f8407-26fa-43f4-b643-594e9aca5ed3"/>
               </form>
-              <form action="https://radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST">
+              <script type="text/javascript">
+                function twitterModal() {
+                  var url = 'https://mothership-js.fightforthefuture.org/connect/twitter?tag=idl';
+                  var properties = 'width=600,height=500,toolbar=no,status=no,menubar=no';
+                  window.open(url, 'idl_connect', properties);
+                }
+              </script>
+              <form method="POST">
                 <input type="hidden" name="frequency" value="1" />
-                <button class="twitter" type="submit">
+                <button class="twitter" type="button" onclick="twitterModal()">
                   <span>Join with Twitter</span>
                 </button>
               </form>
