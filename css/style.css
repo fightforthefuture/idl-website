@@ -18,6 +18,11 @@ img{
 .cls{
 	clear:both;
 }
+.clearfix:after {
+  content:"";
+  display:block;
+  clear:both;
+}
 a{
 	outline:none;
 	color:#9ebd32;
@@ -842,4 +847,17 @@ section.form button[type="submit"] {
     width: 650px;
     text-align: left;
     opacity: .8;
+}
+
+.websites ul {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  margin-bottom: 100px;
+}
+
+.websites ul li {
+  display: flex;
+  width: 33%;
+  margin: 10px 0;
 }
