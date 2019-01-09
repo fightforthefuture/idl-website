@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
   body.appendChild(injector);
 
   document.addEventListener('click', function(ev) {
-    if (event.target.classList.contains('js-close')) {
+    if (ev.target.classList.contains('js-close')) {
       ev.preventDefault();
       var modal = document.querySelectorAll('.modal-wrapper');
       modal[0].style.display = 'none';
