@@ -80,6 +80,9 @@ h5{
 p{
   font-size:16px;
 }
+img {
+  max-width: 100%;
+}
 .hero{
   height: 760px;
   background: url(../images/hero_bg.png) top center no-repeat;
@@ -153,7 +156,7 @@ p{
       margin-top:10px;
       &:hover{
         background:#1da1f2 - 20%;
-      }      
+      }
     }
   }
 }
@@ -260,8 +263,8 @@ p{
     color:#fff;
     width: 120px;
     padding: 13px 0px;
-    font-size:24px;  
-    text-align: center;  
+    font-size:24px;
+    text-align: center;
     text-transform: uppercase;
   }
   img{
@@ -355,4 +358,54 @@ footer{
 }
 .disclaimer {
   padding-top: 15px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+.modal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0,0,0,0.8);
+  overflow: auto;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90%;
+  max-width: 420px;
+  max-height: 96vh;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 5px;
+}
+.modal-scroll {
+  padding: 40px;
+  overflow-y: auto;
+  text-align: center;
+}
+.modal-scroll .push-top {
+  margin-top: 20px;
+}
+.modal .close {
+  position: absolute;
+  top:   10px;
+  right: 10px;
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: none;
+}
+.modal .close:focus {
+  outline: none;
 }
